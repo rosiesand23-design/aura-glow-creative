@@ -15,7 +15,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-20 text-primary bg-[sidebar-primary-foreground] bg-popover">
-        <div className="max-w-xl bg-black text-white p-8 md:p-12 rounded-lg">
+        <div className="max-w-xl bg-black text-white">
           <p
             className="text-sm tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-up text-white"
             style={{ animationDelay: "0.2s" }}
