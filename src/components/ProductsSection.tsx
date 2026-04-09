@@ -1,0 +1,76 @@
+import product1 from "@/assets/product-1.jpg";
+import product2 from "@/assets/product-2.jpg";
+import product3 from "@/assets/product-3.jpg";
+
+const products = [
+  {
+    image: product1,
+    name: "Velvet Renewal Cream",
+    category: "Moisturizer",
+    price: "$128",
+    description: "Deep hydration with wild rose and hyaluronic acid.",
+  },
+  {
+    image: product2,
+    name: "Golden Hour Serum",
+    category: "Serum",
+    price: "$156",
+    description: "Brightening vitamin C complex with botanical extracts.",
+  },
+  {
+    image: product3,
+    name: "Botanical Body Elixir",
+    category: "Body Oil",
+    price: "$94",
+    description: "Nourishing lavender and jojoba body treatment.",
+  },
+];
+
+const ProductsSection = () => {
+  return (
+    <section className="section-padding" id="collections">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            The Collection
+          </p>
+          <h2 className="heading-section text-foreground mb-4">
+            Curated for Your Ritual
+          </h2>
+          <div className="divider-gold mt-6" />
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+          {products.map((product) => (
+            <div key={product.name} className="group cursor-pointer">
+              <div className="aspect-[4/5] overflow-hidden mb-6 bg-card">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  loading="lazy"
+                  width={640}
+                  height={800}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-2">
+                {product.category}
+              </p>
+              <h3 className="font-display text-xl text-foreground mb-1">
+                {product.name}
+              </h3>
+              <p className="text-sm text-muted-foreground mb-3 font-light">
+                {product.description}
+              </p>
+              <p className="text-sm tracking-wider text-foreground font-medium">
+                {product.price}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductsSection;
