@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="flex items-center justify-between h-20">
-          <a href="/" className="text-2xl tracking-wide text-foreground font-sans">
+          <a href="/" className="text-2xl tracking-wide text-foreground font-serif">
             Dulce Hana
           </a>
 
