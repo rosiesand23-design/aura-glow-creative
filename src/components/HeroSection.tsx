@@ -27,7 +27,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.4s" }}
           >
             Where Nature Meets
-            <span className="block italic text-accent">Timeless Beauty</span>
+            <span className="block italic text-primary">BELLEZA PURA</span>
           </h1>
           <p
             className="text-elegant max-w-md mb-10 opacity-0 animate-fade-up"
