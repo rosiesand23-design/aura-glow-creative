@@ -1,7 +1,5 @@
-
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-
+import product2 from "@/assets/product-2.webp";
+import product3 from "@/assets/product-3.webp";
 const products = [
   {
     image: "/b576fe72-3847-4c77-8a18-0f25a9430b01.webp",
