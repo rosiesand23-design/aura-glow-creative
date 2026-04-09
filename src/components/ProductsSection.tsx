@@ -5,10 +5,10 @@ import product3 from "@/assets/product-3.jpg";
 const products = [
   {
     image: "/3056b123-1450-4090-96a5-96ed0d837553.webp",
-    name: "Active Eye Cream",
+    name: "Active Eye Cream\n",
     category: "EYE CREAM",
     price: "$",
-    description: "A firming, fatigue-fighting formula designed to smooth and energize the delicate eye area.",
+    description: "A firming, fatigue-fighting formula designed to smooth and energize the delicate eye area.\n",
   },
   {
     image: product2,
