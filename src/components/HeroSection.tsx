@@ -40,10 +40,10 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.8s" }}
           >
-            <a href="#collections" className="btn-elegant text-white bg-accent">
+            <a href="#collections" className="btn-elegant text-white bg-primary">
               Explore Collection
             </a>
-            <a href="#rituals" className="btn-elegant-outline text-white bg-accent">
+            <a href="#rituals" className="btn-elegant-outline text-white bg-primary">
               Our Rituals
             </a>
           </div>
