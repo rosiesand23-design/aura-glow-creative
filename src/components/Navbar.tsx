@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="flex items-center justify-between h-20">
           <a href="/" className="font-display text-2xl tracking-wide text-foreground">
-            Lumière
+            Dulce Hana
           </a>
 
           <div className="hidden md:flex items-center gap-10">
