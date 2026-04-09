@@ -46,7 +46,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground tracking-wider">
-            © 2026 Lumière. All rights reserved.
+            © 2026 Dulce Hana. All rights reserved.
           </p>
           <div className="flex gap-6">
             {["Privacy", "Terms", "Cookies"].map((item) => (
