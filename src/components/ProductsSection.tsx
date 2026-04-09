@@ -4,11 +4,11 @@ import product3 from "@/assets/product-3.jpg";
 
 const products = [
   {
-    image: "/3056b123-1450-4090-96a5-96ed0d837553.webp",
-    name: "Active Eye Cream\n",
-    category: "EYE CREAM",
+    image: "/7a4e567e-ce2f-43a7-b7f1-e07da88b5a75.webp",
+    name: "Mild Toning Elixir",
+    category: "TONER",
     price: "$",
-    description: "A firming, fatigue-fighting formula designed to smooth and energize the delicate eye area.\n",
+    description: "Refresh, balance, and prep—the gentle way.\n",
   },
   {
     image: product2,
