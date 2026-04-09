@@ -11,11 +11,11 @@ const HeroSection = () => {
           height={1080}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/50 to-transparent text-black bg-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-20 text-primary bg-[sidebar-primary-foreground] bg-black">
-        <div className="max-w-xl bg-black text-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-20">
+        <div className="max-w-xl text-white">
           <p
             className="text-sm tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-up text-white"
             style={{ animationDelay: "0.2s" }}
