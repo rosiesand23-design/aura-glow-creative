@@ -4,11 +4,11 @@ import product3 from "@/assets/product-3.jpg";
 
 const products = [
   {
-    image: product1,
-    name: "Velvet Renewal Cream",
-    category: "Moisturizer",
-    price: "$128",
-    description: "Deep hydration with wild rose and hyaluronic acid.",
+    image: "/3056b123-1450-4090-96a5-96ed0d837553.webp",
+    name: "Active Eye Cream",
+    category: "EYE CREAM",
+    price: "$",
+    description: "A firming, fatigue-fighting formula designed to smooth and energize the delicate eye area.",
   },
   {
     image: product2,
