@@ -4,7 +4,7 @@ import product3 from "@/assets/product-3.jpg";
 
 const products = [
   {
-    image: "/7a4e567e-ce2f-43a7-b7f1-e07da88b5a75.webp",
+    image: "/b576fe72-3847-4c77-8a18-0f25a9430b01.webp",
     name: "Mild Toning Elixir",
     category: "TONER",
     price: "$",
