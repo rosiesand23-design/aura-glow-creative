@@ -15,22 +15,22 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-20 text-primary bg-[sidebar-primary-foreground] bg-popover">
-        <div className="max-w-xl">
+        <div className="max-w-xl bg-black text-white p-8 md:p-12 rounded-lg">
           <p
-            className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-6 opacity-0 animate-fade-up"
+            className="text-sm tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-up text-white"
             style={{ animationDelay: "0.2s" }}
           >
             Botanical Luxury
           </p>
           <h1
-            className="heading-display text-foreground mb-8 opacity-0 animate-fade-up"
+            className="heading-display mb-8 opacity-0 animate-fade-up text-white"
             style={{ animationDelay: "0.4s" }}
           >
             Where Nature Meets
-            <span className="block italic text-primary">BELLEZA PURA</span>
+            <span className="block italic text-white">BELLEZA PURA</span>
           </h1>
           <p
-            className="text-elegant max-w-md mb-10 opacity-0 animate-fade-up"
+            className="text-elegant max-w-md mb-10 opacity-0 animate-fade-up text-white"
             style={{ animationDelay: "0.6s" }}
           >
             Crafted from the rarest botanicals, each formulation is a testament
@@ -40,13 +40,14 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.8s" }}
           >
-            <a href="#collections" className="btn-elegant">
+            <a href="#collections" className="btn-elegant text-white bg-accent">
               Explore Collection
             </a>
-            <a href="#rituals" className="btn-elegant-outline">
+            <a href="#rituals" className="btn-elegant-outline text-white bg-accent">
               Our Rituals
             </a>
           </div>
+        </div>
         </div>
       </div>
     </section>
