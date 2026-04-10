@@ -5,7 +5,7 @@ const testimonials = [
     quote:
       "Dulce Hana transformed my skincare routine. The Hyaluronic Moisturizer gives my skin an ethereal glow I've never achieved before.",
     author: "Rosie",
-    location: "Paris",
+    location: "Burbank, CA",
   },
   {
     quote:
