@@ -10,12 +10,12 @@ const testimonials = [
   {
     quote:
       "I've tried countless luxury brands. Nothing compares to the purity and efficacy of these formulations. Truly exceptional.",
-    author: "Naomi \n",
-    location: "New York",
+    author: "Naomi",
+    location: "Sherman Oaks",
   },
   {
     quote:
-      "The Velvet Renewal Cream is like silk on my skin. I wake up every morning feeling radiant and deeply nourished.",
+      "The Embrace Collagen Moisturizer is like silk on my skin. I wake up every morning feeling radiant and deeply nourished.",
     author: "Isabelle M.",
     location: "London",
   },
