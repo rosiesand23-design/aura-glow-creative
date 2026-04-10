@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { CartDrawer } from "@/components/CartDrawer";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,18 +26,22 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <a href="#shop" className="btn-elegant-outline text-xs py-2 px-6">
+            <CartDrawer />
+            <a href="#collections" className="btn-elegant-outline text-xs py-2 px-6">
               Shop Now
             </a>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex md:hidden items-center gap-4">
+            <CartDrawer />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -53,7 +58,7 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <a href="#shop" className="btn-elegant text-xs py-2 px-6 text-center mt-4">
+            <a href="#collections" className="btn-elegant text-xs py-2 px-6 text-center mt-4">
               Shop Now
             </a>
           </div>
