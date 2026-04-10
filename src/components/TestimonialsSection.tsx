@@ -11,7 +11,7 @@ const testimonials = [
     quote:
       "I've tried countless luxury brands. Nothing compares to the purity and efficacy of these formulations. Truly exceptional.",
     author: "Naomi",
-    location: "STUDIO CITY, CA",
+    location: "Valley Village, CA",
   },
   {
     quote:
