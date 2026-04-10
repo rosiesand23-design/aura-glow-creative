@@ -10,10 +10,10 @@ const products = [
   },
   {
     image: product2,
-    name: "Golden Hour Serum",
+    name: "Collagen and Retinol Serum ",
     category: "Serum",
-    price: "$156",
-    description: "Brightening vitamin C complex with botanical extracts.",
+    price: "$",
+    description: "​A powerhouse blend of collagen, retinol, and hyaluronic acid that firms, smooths, and deeply hydrates for skin that feels plump, protected, and radiant every day. ",
   },
   {
     image: product3,
