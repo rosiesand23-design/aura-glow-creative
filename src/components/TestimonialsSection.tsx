@@ -3,15 +3,15 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Lumière transformed my skincare routine. The Golden Hour Serum gives my skin an ethereal glow I've never achieved before.",
-    author: "Camille R.",
+      "Dulce Hana transformed my skincare routine. The Hyaluronic Moisturizer gives my skin an ethereal glow I've never achieved before.",
+    author: "Rosie",
     location: "Paris",
   },
   {
     quote:
       "I've tried countless luxury brands. Nothing compares to the purity and efficacy of these formulations. Truly exceptional.",
     author: "Naomi",
-    location: "Sherman Oaks",
+    location: "STUDIO CITY, CA",
   },
   {
     quote:
