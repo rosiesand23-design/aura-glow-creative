@@ -17,7 +17,7 @@ const testimonials = [
     quote:
       "The Embrace Collagen Moisturizer is like silk on my skin. I wake up every morning feeling radiant and deeply nourished.",
     author: "Lisa ",
-    location: "London",
+    location: "LARGOS, FLORIDA",
   },
 ];
 
