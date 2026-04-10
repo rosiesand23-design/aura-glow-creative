@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
-            <h3 className="font-display text-2xl text-foreground mb-4">Lumière</h3>
+            <h3 className="font-display text-2xl text-foreground mb-4">Dulce Hana</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-light">
               Botanical luxury skincare, crafted with intention and rooted in nature.
             </p>
