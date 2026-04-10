@@ -17,7 +17,7 @@ const products = [
   },
   {
     image: product3,
-    name: "Botanical Body Elixir",
+    name: "​",
     category: "Body Oil",
     price: "$94",
     description: "Nourishing lavender and jojoba body treatment.",
