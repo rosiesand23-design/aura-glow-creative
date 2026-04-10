@@ -3,10 +3,10 @@ import product3 from "@/assets/product-3.webp";
 const products = [
   {
     image: "/b576fe72-3847-4c77-8a18-0f25a9430b01.webp",
-    name: "Hyaluronic Moisturizer",
-    category: "Moisturizing Cream",
+    name: "Active Eye Cream",
+    category: "Eye Cream",
     price: "$",
-    description: "A rich, cushiony cream that delivers deep hydration and visible plumpness overnight.\n",
+    description: "A firming, fatigue-fighting formula designed to smooth and energize the delicate eye area.\n",
   },
   {
     image: product2,
