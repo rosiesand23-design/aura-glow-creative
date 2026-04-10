@@ -17,10 +17,10 @@ const products = [
   },
   {
     image: product3,
-    name: "​",
-    category: "Body Oil",
-    price: "$94",
-    description: "Nourishing lavender and jojoba body treatment.",
+    name: "Mild Toning Elixir",
+    category: "Toner",
+    price: "$",
+    description: "Refresh, balance, and prep—the gentle way.",
   },
 ];
 
