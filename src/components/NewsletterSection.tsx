@@ -19,7 +19,7 @@ const NewsletterSection = () => {
           Stay Connected
         </p>
         <h2 className="heading-section text-foreground mb-4">
-          Join the Lumière Circle
+          Join the Dulce Hana Circle
         </h2>
         <div className="divider-gold mt-6 mb-8" />
         <p className="text-elegant text-sm mb-10 max-w-md mx-auto">
