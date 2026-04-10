@@ -10,7 +10,7 @@ const testimonials = [
   {
     quote:
       "I've tried countless luxury brands. Nothing compares to the purity and efficacy of these formulations. Truly exceptional.",
-    author: "Sophia L.",
+    author: "Naomi \n",
     location: "New York",
   },
   {
