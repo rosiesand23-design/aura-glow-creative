@@ -3,10 +3,10 @@ import product3 from "@/assets/product-3.webp";
 const products = [
   {
     image: "/b576fe72-3847-4c77-8a18-0f25a9430b01.webp",
-    name: "Mild Toning Elixir",
-    category: "TONER",
+    name: "Hyaluronic Moisturizer",
+    category: "Moisturizing Cream",
     price: "$",
-    description: "Refresh, balance, and prep—the gentle way.\n",
+    description: "A rich, cushiony cream that delivers deep hydration and visible plumpness overnight.\n",
   },
   {
     image: product2,
