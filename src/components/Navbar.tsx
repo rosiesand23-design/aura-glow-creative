@@ -26,14 +26,12 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <CartDrawer />
             <a href="#collections" className="btn-elegant-outline text-xs py-2 px-6">
               Shop Now
             </a>
           </div>
 
           <div className="flex md:hidden items-center gap-4">
-            <CartDrawer />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground"

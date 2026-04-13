@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchProductByHandle, ShopifyProduct } from "@/lib/shopify";
-import { useCartStore } from "@/stores/cartStore";
 import { Loader2, ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -14,8 +11,6 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [selectedVariantIdx, setSelectedVariantIdx] = useState(0);
   const [selectedImage, setSelectedImage] = useState(0);
-  const addItem = useCartStore((s) => s.addItem);
-  const isLoading = useCartStore((s) => s.isLoading);
 
   useEffect(() => {
     if (!handle) return;
@@ -55,19 +50,6 @@ const ProductDetail = () => {
   const variants = product.node.variants.edges;
   const selectedVariant = variants[selectedVariantIdx]?.node;
 
-  const handleAddToCart = async () => {
-    if (!selectedVariant) return;
-    await addItem({
-      product,
-      variantId: selectedVariant.id,
-      variantTitle: selectedVariant.title,
-      price: selectedVariant.price,
-      quantity: 1,
-      selectedOptions: selectedVariant.selectedOptions || [],
-    });
-    toast.success("Added to cart", { description: product.node.title, position: "top-center" });
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -78,7 +60,6 @@ const ProductDetail = () => {
         </Link>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-          {/* Images */}
           <div>
             <div className="aspect-[4/5] bg-card overflow-hidden mb-4">
               {images[selectedImage] ? (
@@ -108,7 +89,6 @@ const ProductDetail = () => {
             )}
           </div>
 
-          {/* Details */}
           <div className="flex flex-col justify-center">
             <h1 className="font-display text-3xl md:text-4xl text-foreground mb-4">
               {product.node.title}
@@ -120,7 +100,6 @@ const ProductDetail = () => {
               {product.node.description}
             </p>
 
-            {/* Variant selection */}
             {product.node.options.map((option) => {
               if (option.name === "Title" && option.values.length === 1 && option.values[0] === "Default Title") return null;
               return (
@@ -150,20 +129,6 @@ const ProductDetail = () => {
                 </div>
               );
             })}
-
-            <Button
-              onClick={handleAddToCart}
-              disabled={isLoading || !selectedVariant?.availableForSale}
-              className="w-full bg-foreground text-background hover:bg-foreground/90 h-12 text-sm tracking-[0.15em] uppercase"
-            >
-              {isLoading ? (
-                <Loader2 className="w-4 h-4 animate-spin" />
-              ) : !selectedVariant?.availableForSale ? (
-                "Sold Out"
-              ) : (
-                "Add to Cart"
-              )}
-            </Button>
           </div>
         </div>
       </main>
