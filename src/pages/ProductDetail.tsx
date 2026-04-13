@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { fetchProductByHandle, ShopifyProduct } from "@/lib/shopify";
 import { Loader2, ArrowLeft } from "lucide-react";
 
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const ProductDetail = () => {
@@ -50,7 +51,8 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <main className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-12 pb-20">
+      <Navbar />
+      <main className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-28 pb-20">
         <Link to="/#collections" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
           <ArrowLeft className="h-4 w-4" />
           Back to Collection
