@@ -24,8 +24,7 @@ const ProductDetail = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-background">
-        <Navbar />
-        <div className="flex justify-center items-center pt-40 pb-20">
+        <div className="flex justify-center items-center pt-20 pb-20">
           <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
         </div>
       </div>
@@ -35,8 +34,7 @@ const ProductDetail = () => {
   if (!product) {
     return (
       <div className="min-h-screen bg-background">
-        <Navbar />
-        <div className="text-center pt-40 pb-20">
+        <div className="text-center pt-20 pb-20">
           <p className="text-muted-foreground mb-4">Product not found</p>
           <Link to="/" className="text-sm tracking-[0.15em] uppercase text-foreground hover:text-accent transition-colors">
             Back to Home
@@ -52,8 +50,7 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-      <main className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-28 pb-20">
+      <main className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-12 pb-20">
         <Link to="/#collections" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
           <ArrowLeft className="h-4 w-4" />
           Back to Collection
