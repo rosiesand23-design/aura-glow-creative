@@ -51,7 +51,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-b border-border px-6 py-6 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-b border-border px-6 py-6 flex flex-col gap-4">
           <a
             href="/#collections"
             onClick={() => setIsOpen(false)}
