@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
                   <Star
                     key={i}
                     size={14}
-                    className="text-accent fill-accent"
+                    className="text-yellow-500 fill-yellow-500"
                   />
                 ))}
               </div>
