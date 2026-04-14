@@ -13,7 +13,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-white">
       <div className="max-w-2xl mx-auto text-center">
         <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
           Stay Connected
