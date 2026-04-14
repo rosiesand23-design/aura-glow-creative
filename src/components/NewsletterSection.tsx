@@ -39,7 +39,7 @@ const NewsletterSection = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               required
-              className="flex-1 px-5 py-3 bg-transparent border border-border text-foreground text-sm tracking-wider placeholder:text-muted-foreground/60 focus:outline-none focus:border-accent transition-colors font-body"
+              className="flex-1 px-5 py-3 bg-white border border-foreground text-foreground text-sm tracking-wider placeholder:text-foreground/40 focus:outline-none focus:border-foreground transition-colors font-body"
             />
             <button type="submit" className="btn-elegant text-xs whitespace-nowrap bg-white text-foreground border border-foreground">
               Subscribe
