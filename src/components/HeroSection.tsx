@@ -39,7 +39,7 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.8s" }}
           >
-            <a href="#collections" className="btn-elegant text-white bg-primary">
+            <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground">
               Explore Collection
             </a>
             <a href="#rituals" className="btn-elegant-outline text-foreground border-foreground">
