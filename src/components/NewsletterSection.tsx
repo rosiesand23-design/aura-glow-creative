@@ -41,7 +41,7 @@ const NewsletterSection = () => {
               required
               className="flex-1 px-5 py-3 bg-transparent border border-border text-foreground text-sm tracking-wider placeholder:text-muted-foreground/60 focus:outline-none focus:border-accent transition-colors font-body"
             />
-            <button type="submit" className="btn-elegant text-xs whitespace-nowrap">
+            <button type="submit" className="btn-elegant text-xs whitespace-nowrap bg-white text-foreground border border-foreground">
               Subscribe
             </button>
           </form>
