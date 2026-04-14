@@ -129,6 +129,6 @@
   }
 
   .divider-gold {
-    @apply w-16 h-px bg-accent mx-auto;
+    @apply w-16 h-px bg-yellow-500 mx-auto;
   }
 }
