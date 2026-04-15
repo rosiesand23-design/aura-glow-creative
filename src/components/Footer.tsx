@@ -76,6 +76,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+        </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground tracking-wider">
