@@ -25,7 +25,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex gap-4">
-              <a href="https://instagram.com/dulcehana.co" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+              <a href="https://instagram.com/dulcehanabeauty" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                 <Instagram size={18} />
               </a>
             </div>
