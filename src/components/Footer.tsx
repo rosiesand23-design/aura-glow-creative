@@ -47,7 +47,7 @@ const Footer = () => {
               {[
                 { label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy", note: "Calculated at checkout" },
                 { label: "Returns", href: "https://hbk21r-71.myshopify.com/policies/refund-policy", note: "All Sales are Final" },
-                
+                { label: "Contact", href: "mailto:dulcehana2@gmail.com" },
               ].map((item) => (
                 <li key={item.label}>
                   <a
