@@ -57,9 +57,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link}>
-                    {shopLinks[link] ? (
+                    {footerLinks[link] ? (
                       <Link
-                        to={shopLinks[link]}
+                        to={footerLinks[link]}
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
                       >
                         {link}
