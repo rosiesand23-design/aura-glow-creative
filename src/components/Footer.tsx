@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram } from "lucide-react";
 
-const shopLinks: Record<string, string> = {
+const footerLinks: Record<string, string> = {
   "All Products": "/shop/all",
   "Serums": "/shop/serums",
   "Moisturizers": "/shop/moisturizers",
   "Cleansers": "/shop/cleanser",
+  "Contact": "mailto:dulcehana2@gmail.com",
 };
 
 const Footer = () => {
@@ -19,8 +20,8 @@ const Footer = () => {
               Botanical luxury skincare, crafted with intention and rooted in nature.
             </p>
             <div className="space-y-3 mb-6">
-              <a href="mailto:hello@dulcehana.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light">
-                <Mail size={14} /> hello@dulcehana.com
+              <a href="mailto:dulcehana2@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light">
+                <Mail size={14} /> dulcehana2@gmail.com
               </a>
               <a href="tel:+18001234567" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light">
                 <Phone size={14} /> +1 (800) 123-4567
@@ -56,13 +57,22 @@ const Footer = () => {
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link}>
-                    {shopLinks[link] ? (
-                      <Link
-                        to={shopLinks[link]}
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
-                      >
-                        {link}
-                      </Link>
+                    {footerLinks[link] ? (
+                      footerLinks[link].startsWith("mailto:") ? (
+                        <a
+                          href={footerLinks[link]}
+                          className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                        >
+                          {link}
+                        </a>
+                      ) : (
+                        <Link
+                          to={footerLinks[link]}
+                          className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                        >
+                          {link}
+                        </Link>
+                      )
                     ) : (
                       <a
                         href="#"
