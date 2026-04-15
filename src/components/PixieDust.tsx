@@ -35,7 +35,7 @@ const PixieDust = () => {
     window.addEventListener("resize", resize);
 
     const spawnParticles = (delta: number) => {
-      const count = Math.min(Math.abs(delta) * 0.15, 4);
+      const count = Math.min(Math.abs(delta) * 0.08, 2);
       const vw = window.innerWidth;
       const vh = window.innerHeight;
 
@@ -43,10 +43,10 @@ const PixieDust = () => {
         particlesRef.current.push({
           x: Math.random() * vw,
           y: Math.random() * vh,
-          size: Math.random() * 3.5 + 1.0,
-          opacity: Math.random() * 0.45 + 0.15,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.3 - 0.15,
+          size: Math.random() * 2.5 + 0.8,
+          opacity: Math.random() * 0.25 + 0.08,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.25 - 0.1,
           life: 0,
           maxLife: Math.random() * 70 + 30,
           hue: 36 + Math.random() * 14,
@@ -66,24 +66,22 @@ const PixieDust = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     const ambientInterval = setInterval(() => {
-      if (particlesRef.current.length < 10) {
-        for (let i = 0; i < 1; i++) {
+      if (particlesRef.current.length < 5) {
         particlesRef.current.push({
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
-          size: Math.random() * 1.8 + 0.6,
-          opacity: Math.random() * 0.24 + 0.07,
-          vx: (Math.random() - 0.5) * 0.35,
-          vy: -Math.random() * 0.22,
+          size: Math.random() * 1.4 + 0.5,
+          opacity: Math.random() * 0.15 + 0.05,
+          vx: (Math.random() - 0.5) * 0.25,
+          vy: -Math.random() * 0.15,
           life: 0,
           maxLife: Math.random() * 75 + 32,
           hue: 36 + Math.random() * 14,
           shimmerPhase: Math.random() * Math.PI * 2,
           shimmerSpeed: Math.random() * 0.07 + 0.025,
         });
-        }
       }
-    }, 400);
+    }, 600);
 
     const animate = () => {
       const w = window.innerWidth;
