@@ -25,10 +25,6 @@ const Footer = () => {
               links: ["All Products", "Serums", "Moisturizers", "Cleansers"],
             },
             {
-              title: "Company",
-              links: ["Our Story", "Ingredients", "Sustainability", "Press"],
-            },
-            {
               title: "Support",
               links: ["Contact", "Shipping", "Returns", "FAQ"],
             },
