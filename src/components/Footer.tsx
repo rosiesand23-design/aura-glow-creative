@@ -21,43 +21,47 @@ const Footer = () => {
             </p>
           </div>
 
-          {[
-            {
-              title: "Shop",
-              links: ["All Products", "Serums", "Moisturizers", "Cleansers"],
-            },
-            {
-              title: "Support",
-              links: [{ label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy" }, { label: "Returns", href: "#" }, { label: "FAQ", href: "#" }],
-            },
-          ].map((col) => (
-            <div key={col.title}>
-              <h4 className="text-xs tracking-[0.2em] uppercase text-foreground mb-4 font-medium">
-                {col.title}
-              </h4>
-              <ul className="space-y-3">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    {footerLinks[link] ? (
-                      <Link
-                        to={footerLinks[link]}
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
-                      >
-                        {link}
-                      </Link>
-                    ) : (
-                      <a
-                        href="#"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
-                      >
-                        {link}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <h4 className="text-xs tracking-[0.2em] uppercase text-foreground mb-4 font-medium">
+              Shop
+            </h4>
+            <ul className="space-y-3">
+              {["All Products", "Serums", "Moisturizers", "Cleansers"].map((link) => (
+                <li key={link}>
+                  <Link
+                    to={footerLinks[link]}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                  >
+                    {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs tracking-[0.2em] uppercase text-foreground mb-4 font-medium">
+              Support
+            </h4>
+            <ul className="space-y-3">
+              {[
+                { label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy" },
+                { label: "Returns", href: "#" },
+                { label: "FAQ", href: "#" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div>
             <h4 className="text-xs tracking-[0.2em] uppercase text-foreground mb-4 font-medium">
