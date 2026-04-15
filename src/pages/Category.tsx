@@ -17,10 +17,10 @@ const CATEGORY_META: Record<string, { title: string; subtitle: string; query: st
     subtitle: "Deep hydration rooted in botanical science",
     query: "product_type:Moisturizers",
   },
-  "body-care": {
-    title: "Body Care",
-    subtitle: "Luxurious rituals for the whole body",
-    query: "product_type:Body Care",
+  cleanser: {
+    title: "Cleansers",
+    subtitle: "Gentle formulas for a fresh, radiant complexion",
+    query: "product_type:Cleansers",
   },
   all: {
     title: "All Products",

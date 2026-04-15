@@ -4,7 +4,7 @@ const shopLinks: Record<string, string> = {
   "All Products": "/shop/all",
   "Serums": "/shop/serums",
   "Moisturizers": "/shop/moisturizers",
-  "Body Care": "/shop/body-care",
+  "Cleansers": "/shop/cleanser",
 };
 
 const Footer = () => {
