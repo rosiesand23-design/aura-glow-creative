@@ -3,15 +3,15 @@ import heroImage from "@/assets/hero-skincare.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-white">
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Elegant floral line art illustration"
-          width={1920}
-          height={1080}
-          className="w-full h-full object-contain opacity-20"
-        />
-      </div>
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-20">
         <div className="max-w-xl text-foreground">
