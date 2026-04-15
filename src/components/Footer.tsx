@@ -58,9 +58,6 @@ const Footer = () => {
                   >
                     {item.label}
                   </a>
-                  {"note" in item && item.note && (
-                    <p className="text-xs text-muted-foreground/70 font-light mt-0.5">{item.note}</p>
-                  )}
                 </li>
               ))}
             </ul>
