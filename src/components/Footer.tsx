@@ -19,16 +19,6 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground leading-relaxed font-light mb-6">
               Botanical luxury skincare, crafted with intention and rooted in nature.
             </p>
-            <div className="space-y-3 mb-6">
-              <a href="mailto:dulcehana2@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light">
-                <Mail size={14} /> dulcehana2@gmail.com
-              </a>
-            </div>
-            <div className="flex gap-4">
-              <a href="https://instagram.com/dulcehanabeauty" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                <Instagram size={18} />
-              </a>
-            </div>
           </div>
 
           {[
@@ -38,7 +28,7 @@ const Footer = () => {
             },
             {
               title: "Support",
-              links: ["Contact", "Shipping", "Returns", "FAQ"],
+              links: ["Shipping", "Returns", "FAQ"],
             },
           ].map((col) => (
             <div key={col.title}>
@@ -49,21 +39,12 @@ const Footer = () => {
                 {col.links.map((link) => (
                   <li key={link}>
                     {footerLinks[link] ? (
-                      footerLinks[link].startsWith("mailto:") ? (
-                        <a
-                          href={footerLinks[link]}
-                          className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
-                        >
-                          {link}
-                        </a>
-                      ) : (
-                        <Link
-                          to={footerLinks[link]}
-                          className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
-                        >
-                          {link}
-                        </Link>
-                      )
+                      <Link
+                        to={footerLinks[link]}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                      >
+                        {link}
+                      </Link>
                     ) : (
                       <a
                         href="#"
@@ -77,7 +58,24 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-        </div>
+
+          <div>
+            <h4 className="text-xs tracking-[0.2em] uppercase text-foreground mb-4 font-medium">
+              Contact
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="mailto:dulcehana2@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light">
+                  <Mail size={14} /> dulcehana2@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/dulcehanabeauty" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light">
+                  <Instagram size={14} /> @dulcehanabeauty
+                </a>
+              </li>
+            </ul>
+          </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground tracking-wider">
