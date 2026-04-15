@@ -22,7 +22,7 @@ const Footer = () => {
           {[
             {
               title: "Shop",
-              links: ["All Products", "Serums", "Moisturizers", "Body Care"],
+              links: ["All Products", "Serums", "Moisturizers", "Cleansers"],
             },
             {
               title: "Company",
