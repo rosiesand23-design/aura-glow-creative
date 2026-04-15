@@ -35,27 +35,26 @@ const PixieDust = () => {
     window.addEventListener("resize", resize);
 
     const spawnParticles = (scrollY: number, delta: number) => {
-      const intensity = Math.min(Math.abs(delta) * 0.6, 18);
+      const intensity = Math.min(Math.abs(delta) * 0.15, 5);
       const viewportH = window.innerHeight;
       const viewportW = window.innerWidth;
 
       for (let i = 0; i < intensity; i++) {
-        // Spread across entire viewport width and height
         const x = Math.random() * viewportW;
         const y = Math.random() * viewportH;
 
         particlesRef.current.push({
           x,
           y,
-          size: Math.random() * 3.5 + 1.5,
-          opacity: Math.random() * 0.7 + 0.3,
-          vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 1.5 - 0.5,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.35 + 0.1,
+          vx: (Math.random() - 0.5) * 1,
+          vy: (Math.random() - 0.5) * 0.8 - 0.3,
           life: 0,
-          maxLife: Math.random() * 120 + 60,
-          hue: 36 + Math.random() * 14, // gold range 36-50
+          maxLife: Math.random() * 90 + 40,
+          hue: 36 + Math.random() * 14,
           shimmerPhase: Math.random() * Math.PI * 2,
-          shimmerSpeed: Math.random() * 0.15 + 0.05,
+          shimmerSpeed: Math.random() * 0.1 + 0.03,
         });
       }
     };
