@@ -28,7 +28,7 @@ const Footer = () => {
             },
             {
               title: "Support",
-              links: ["Shipping", "Returns", "FAQ"],
+              links: [{ label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy" }, { label: "Returns", href: "#" }, { label: "FAQ", href: "#" }],
             },
           ].map((col) => (
             <div key={col.title}>
