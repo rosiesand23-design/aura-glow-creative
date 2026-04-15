@@ -45,7 +45,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {[
-                { label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy" },
+                { label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy", note: "Calculated at checkout" },
                 { label: "Returns", href: "https://hbk21r-71.myshopify.com/policies/refund-policy" },
                 { label: "FAQ", href: "https://hbk21r-71.myshopify.com/policies/terms-of-service" },
               ].map((item) => (
@@ -58,6 +58,9 @@ const Footer = () => {
                   >
                     {item.label}
                   </a>
+                  {"note" in item && item.note && (
+                    <p className="text-xs text-muted-foreground/70 font-light mt-0.5">{item.note}</p>
+                  )}
                 </li>
               ))}
             </ul>
