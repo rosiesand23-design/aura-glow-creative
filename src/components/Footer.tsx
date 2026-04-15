@@ -47,6 +47,7 @@ const Footer = () => {
               {[
                 { label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy", note: "Calculated at checkout" },
                 { label: "Returns", href: "https://hbk21r-71.myshopify.com/policies/refund-policy", note: "All Sales are Final" },
+                
               ].map((item) => (
                 <li key={item.label}>
                   <a
@@ -62,6 +63,14 @@ const Footer = () => {
                   )}
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs tracking-[0.2em] uppercase text-foreground mb-4 font-medium">
+              Contact
+            </h4>
+            <ul className="space-y-3">
               <li>
                 <a href="mailto:dulcehana2@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light">
                   <Mail size={14} /> dulcehana2@gmail.com
