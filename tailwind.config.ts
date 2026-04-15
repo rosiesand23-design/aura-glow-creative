@@ -94,12 +94,18 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "pixie-shimmer": {
+          "0%": { opacity: "0", transform: "scale(0) rotate(0deg)" },
+          "30%": { opacity: "1", transform: "scale(1) rotate(90deg)" },
+          "100%": { opacity: "0", transform: "scale(0.5) rotate(180deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.8s ease-out forwards",
         "fade-in": "fade-in 1s ease-out forwards",
+        "pixie-shimmer": "pixie-shimmer 1.2s ease-out forwards",
       },
     },
   },
