@@ -58,12 +58,21 @@ const Footer = () => {
                 {col.links.map((link) => (
                   <li key={link}>
                     {footerLinks[link] ? (
-                      <Link
-                        to={footerLinks[link]}
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
-                      >
-                        {link}
-                      </Link>
+                      footerLinks[link].startsWith("mailto:") ? (
+                        <a
+                          href={footerLinks[link]}
+                          className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                        >
+                          {link}
+                        </a>
+                      ) : (
+                        <Link
+                          to={footerLinks[link]}
+                          className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                        >
+                          {link}
+                        </Link>
+                      )
                     ) : (
                       <a
                         href="#"
