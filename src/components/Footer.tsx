@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, Instagram } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 
 const footerLinks: Record<string, string> = {
   "All Products": "/shop/all",
