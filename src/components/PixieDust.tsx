@@ -35,7 +35,7 @@ const PixieDust = () => {
     window.addEventListener("resize", resize);
 
     const spawnParticles = (delta: number) => {
-      const count = Math.min(Math.abs(delta) * 0.25, 8);
+      const count = Math.min(Math.abs(delta) * 0.5, 18);
       const vw = window.innerWidth;
       const vh = window.innerHeight;
 
@@ -43,15 +43,15 @@ const PixieDust = () => {
         particlesRef.current.push({
           x: Math.random() * vw,
           y: Math.random() * vh,
-          size: Math.random() * 1.8 + 0.5,
-          opacity: Math.random() * 0.22 + 0.06,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.3 - 0.15,
+          size: Math.random() * 2.8 + 0.8,
+          opacity: Math.random() * 0.35 + 0.1,
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: (Math.random() - 0.5) * 0.5 - 0.25,
           life: 0,
-          maxLife: Math.random() * 70 + 30,
+          maxLife: Math.random() * 90 + 40,
           hue: 36 + Math.random() * 14,
           shimmerPhase: Math.random() * Math.PI * 2,
-          shimmerSpeed: Math.random() * 0.06 + 0.02,
+          shimmerSpeed: Math.random() * 0.1 + 0.03,
         });
       }
     };
@@ -66,24 +66,24 @@ const PixieDust = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     const ambientInterval = setInterval(() => {
-      if (particlesRef.current.length < 15) {
-        for (let i = 0; i < 2; i++) {
+      if (particlesRef.current.length < 35) {
+        for (let i = 0; i < 4; i++) {
         particlesRef.current.push({
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
-          size: Math.random() * 1.4 + 0.5,
-          opacity: Math.random() * 0.18 + 0.05,
-          vx: (Math.random() - 0.5) * 0.25,
-          vy: -Math.random() * 0.15,
+          size: Math.random() * 2.2 + 0.6,
+          opacity: Math.random() * 0.28 + 0.08,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: -Math.random() * 0.25,
           life: 0,
-          maxLife: Math.random() * 60 + 25,
+          maxLife: Math.random() * 80 + 35,
           hue: 36 + Math.random() * 14,
           shimmerPhase: Math.random() * Math.PI * 2,
-          shimmerSpeed: Math.random() * 0.05 + 0.02,
+          shimmerSpeed: Math.random() * 0.08 + 0.03,
         });
         }
       }
-    }, 500);
+    }, 300);
 
     const animate = () => {
       const w = window.innerWidth;
