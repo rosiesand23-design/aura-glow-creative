@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram } from "lucide-react";
 
-const shopLinks: Record<string, string> = {
+const footerLinks: Record<string, string> = {
   "All Products": "/shop/all",
   "Serums": "/shop/serums",
   "Moisturizers": "/shop/moisturizers",
   "Cleansers": "/shop/cleanser",
+  "Contact": "mailto:dulcehana2@gmail.com",
 };
 
 const Footer = () => {
