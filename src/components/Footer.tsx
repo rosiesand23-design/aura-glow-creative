@@ -46,7 +46,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy", note: "Calculated at checkout" },
-                { label: "Returns", href: "https://hbk21r-71.myshopify.com/policies/refund-policy" },
+                { label: "Returns", href: "https://hbk21r-71.myshopify.com/policies/refund-policy", note: "All Sales are Final" },
                 { label: "FAQ", href: "https://hbk21r-71.myshopify.com/policies/terms-of-service" },
               ].map((item) => (
                 <li key={item.label}>
