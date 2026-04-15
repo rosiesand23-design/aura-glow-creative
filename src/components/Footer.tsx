@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div className="md:col-span-1">
             <h3 className="font-display text-2xl text-foreground mb-4">Dulce Hana</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-light mb-6">
@@ -47,27 +47,24 @@ const Footer = () => {
               {[
                 { label: "Shipping", href: "https://hbk21r-71.myshopify.com/policies/shipping-policy", note: "Calculated at checkout" },
                 { label: "Returns", href: "https://hbk21r-71.myshopify.com/policies/refund-policy", note: "All Sales are Final" },
-                { label: "Contact", href: "mailto:dulcehana2@gmail.com" },
               ].map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
                   >
                     {item.label}
                   </a>
-                  {"note" in item && item.note && (
+                  {item.note && (
                     <p className="text-xs text-muted-foreground/70 font-light mt-0.5">{item.note}</p>
                   )}
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div>
-            <h4 className="text-xs tracking-[0.2em] uppercase text-foreground mb-4 font-medium">
+            <h4 className="text-xs tracking-[0.2em] uppercase text-foreground mb-4 mt-8 font-medium">
               Contact
             </h4>
             <ul className="space-y-3">
