@@ -35,7 +35,7 @@ const PixieDust = () => {
     window.addEventListener("resize", resize);
 
     const spawnParticles = (delta: number) => {
-      const count = Math.min(Math.abs(delta) * 0.2, 6);
+      const count = Math.min(Math.abs(delta) * 0.3, 10);
       const vw = window.innerWidth;
       const vh = window.innerHeight;
 
@@ -43,8 +43,8 @@ const PixieDust = () => {
         particlesRef.current.push({
           x: Math.random() * vw,
           y: Math.random() * vh,
-          size: Math.random() * 1.5 + 0.5,
-          opacity: Math.random() * 0.18 + 0.05,
+          size: Math.random() * 2 + 0.6,
+          opacity: Math.random() * 0.25 + 0.07,
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.3 - 0.15,
           life: 0,
@@ -66,22 +66,24 @@ const PixieDust = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     const ambientInterval = setInterval(() => {
-      if (particlesRef.current.length < 12) {
+      if (particlesRef.current.length < 20) {
+        for (let i = 0; i < 2; i++) {
         particlesRef.current.push({
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
-          size: Math.random() * 1.2 + 0.4,
-          opacity: Math.random() * 0.14 + 0.04,
-          vx: (Math.random() - 0.5) * 0.3,
-          vy: -Math.random() * 0.18,
+          size: Math.random() * 1.6 + 0.5,
+          opacity: Math.random() * 0.2 + 0.06,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: -Math.random() * 0.2,
           life: 0,
-          maxLife: Math.random() * 65 + 28,
+          maxLife: Math.random() * 70 + 30,
           hue: 36 + Math.random() * 14,
           shimmerPhase: Math.random() * Math.PI * 2,
-          shimmerSpeed: Math.random() * 0.05 + 0.02,
+          shimmerSpeed: Math.random() * 0.06 + 0.02,
         });
+        }
       }
-    }, 600);
+    }, 450);
 
     const animate = () => {
       const w = window.innerWidth;
