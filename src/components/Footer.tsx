@@ -1,3 +1,12 @@
+import { Link } from "react-router-dom";
+
+const shopLinks: Record<string, string> = {
+  "All Products": "/shop/all",
+  "Serums": "/shop/serums",
+  "Moisturizers": "/shop/moisturizers",
+  "Body Care": "/shop/body-care",
+};
+
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-white">
@@ -31,12 +40,21 @@ const Footer = () => {
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
-                    >
-                      {link}
-                    </a>
+                    {shopLinks[link] ? (
+                      <Link
+                        to={shopLinks[link]}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                      >
+                        {link}
+                      </Link>
+                    ) : (
+                      <a
+                        href="#"
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-light"
+                      >
+                        {link}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
