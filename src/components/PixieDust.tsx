@@ -72,26 +72,22 @@ const PixieDust = () => {
 
     // Also spawn ambient particles periodically for a constant shimmer
     let ambientInterval = setInterval(() => {
-      if (particlesRef.current.length < 10) {
-        const viewportW = window.innerWidth;
-        const viewportH = window.innerHeight;
-        for (let i = 0; i < 1; i++) {
-          particlesRef.current.push({
-            x: Math.random() * viewportW,
-            y: Math.random() * viewportH,
-            size: Math.random() * 1.8 + 0.8,
-            opacity: Math.random() * 0.25 + 0.08,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: -Math.random() * 0.3 - 0.05,
-            life: 0,
-            maxLife: Math.random() * 80 + 40,
-            hue: 36 + Math.random() * 14,
-            shimmerPhase: Math.random() * Math.PI * 2,
-            shimmerSpeed: Math.random() * 0.08 + 0.02,
-          });
-        }
+      if (particlesRef.current.length < 5) {
+        particlesRef.current.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          size: Math.random() * 1.2 + 0.5,
+          opacity: Math.random() * 0.15 + 0.04,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: -Math.random() * 0.2,
+          life: 0,
+          maxLife: Math.random() * 60 + 30,
+          hue: 36 + Math.random() * 14,
+          shimmerPhase: Math.random() * Math.PI * 2,
+          shimmerSpeed: Math.random() * 0.06 + 0.02,
+        });
       }
-    }, 600);
+    }, 900);
 
     const animate = () => {
       const w = window.innerWidth;
