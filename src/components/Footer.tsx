@@ -10,7 +10,7 @@ const footerLinks: Record<string, string> = {
   "Creams": "/shop/creams",
   "Masks": "/shop/masks",
   "Oils": "/shop/oils",
-  "Body Butter": "/shop/body-butter",
+  "Body Butters": "/shop/body-butters",
   "Contact": "mailto:dulcehana2@gmail.com",
 };
 
@@ -31,7 +31,7 @@ const Footer = () => {
               Shop
             </h4>
             <ul className="space-y-3">
-              {["All Products", "Serums", "Moisturizers", "Cleansers", "Toners", "Creams", "Masks", "Oils", "Body Butter"].map((link) => (
+              {["All Products", "Serums", "Moisturizers", "Cleansers", "Toners", "Creams", "Masks", "Oils", "Body Butters"].map((link) => (
                 <li key={link}>
                   <Link
                     to={footerLinks[link]}
