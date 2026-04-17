@@ -22,6 +22,31 @@ const CATEGORY_META: Record<string, { title: string; subtitle: string; query: st
     subtitle: "Gentle formulas for a fresh, radiant complexion",
     query: "product_type:Cleansers",
   },
+  toners: {
+    title: "Toners",
+    subtitle: "Balancing botanicals to refine and refresh",
+    query: "product_type:Toners",
+  },
+  creams: {
+    title: "Creams",
+    subtitle: "Rich, nourishing textures for lasting comfort",
+    query: "product_type:Creams",
+  },
+  masks: {
+    title: "Masks",
+    subtitle: "Ritual treatments for renewed radiance",
+    query: "product_type:Masks",
+  },
+  oils: {
+    title: "Oils",
+    subtitle: "Pure botanical oils for luminous skin",
+    query: "product_type:Oils",
+  },
+  "body-butters": {
+    title: "Body Butters",
+    subtitle: "Decadent hydration from head to toe",
+    query: "product_type:Body Butters",
+  },
   all: {
     title: "All Products",
     subtitle: "The complete Dulce Hana collection",
