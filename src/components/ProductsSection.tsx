@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchProducts, ShopifyProduct } from "@/lib/shopify";
-import { getProductImage } from "@/lib/productImageOverrides";
 import { Loader2 } from "lucide-react";
 
 const ProductsSection = () => {
@@ -50,10 +49,10 @@ const ProductsSection = () => {
                   <div className="aspect-[4/5] overflow-hidden mb-6 bg-white">
                     {img ? (
                       <img
-                        src={getProductImage(product.node.handle, img.url)}
+                        src={img.url}
                         alt={img.altText || product.node.title}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-multiply"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-muted-foreground">

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchProductByHandle, ShopifyProduct } from "@/lib/shopify";
-import { getProductImage } from "@/lib/productImageOverrides";
 import { Loader2, ArrowLeft } from "lucide-react";
 
 import Navbar from "@/components/Navbar";
@@ -61,10 +60,10 @@ const ProductDetail = () => {
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <div className="aspect-[4/5] bg-white overflow-hidden mb-4">
+            <div className="aspect-[4/5] bg-card overflow-hidden mb-4">
               {images[selectedImage] ? (
                 <img
-                  src={selectedImage === 0 ? getProductImage(product.node.handle, images[selectedImage].node.url) : images[selectedImage].node.url}
+                  src={images[selectedImage].node.url}
                   alt={images[selectedImage].node.altText || product.node.title}
                   className="w-full h-full object-cover"
                 />
@@ -78,11 +77,11 @@ const ProductDetail = () => {
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    className={`w-16 h-16 flex-shrink-0 bg-white overflow-hidden border-2 transition-colors ${
+                    className={`w-16 h-16 flex-shrink-0 bg-card overflow-hidden border-2 transition-colors ${
                       i === selectedImage ? "border-accent" : "border-transparent"
                     }`}
                   >
-                    <img src={i === 0 ? getProductImage(product.node.handle, img.node.url) : img.node.url} alt={img.node.altText || ""} className="w-full h-full object-cover" />
+                    <img src={img.node.url} alt={img.node.altText || ""} className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>
