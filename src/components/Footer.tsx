@@ -91,11 +91,11 @@ const Footer = () => {
         <img
           src={footerBanner}
           alt="甜花 Dulce Hana"
-          className="w-full h-16 md:h-24 lg:h-32 object-contain block py-4 mb-8"
+          className="w-full h-16 md:h-24 lg:h-32 object-contain block py-4"
           loading="lazy"
         />
 
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground tracking-wider">
             © 2026 Dulce Hana. All rights reserved.
           </p>
