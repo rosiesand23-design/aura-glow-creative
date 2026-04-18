@@ -28,16 +28,9 @@ const HeroSection = () => {
             Where Nature Meets
             <span className="block italic text-foreground">BELLEZA PURA</span>
           </h1>
-          <p
-            className="text-elegant max-w-md mb-10 opacity-0 animate-fade-up !text-foreground"
-            style={{ animationDelay: "0.6s" }}
-          >
-            Crafted from the rarest botanicals, each formulation is a testament
-            to the art of skincare — pure, potent, and profoundly effective.
-          </p>
           <div
-            className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.8s" }}
+            className="flex flex-col sm:flex-row gap-4 mb-10 opacity-0 animate-fade-up"
+            style={{ animationDelay: "0.6s" }}
           >
             <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground">
               Explore Collection
@@ -46,6 +39,13 @@ const HeroSection = () => {
               Our Rituals
             </a>
           </div>
+          <p
+            className="text-elegant max-w-md opacity-0 animate-fade-up !text-foreground"
+            style={{ animationDelay: "0.8s" }}
+          >
+            Crafted from the rarest botanicals, each formulation is a testament
+            to the art of skincare — pure, potent, and profoundly effective.
+          </p>
         </div>
       </div>
     </section>
