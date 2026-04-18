@@ -8,7 +8,7 @@ const ProductsSection = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchProducts(20)
+    fetchProducts(50)
       .then(setProducts)
       .catch((e) => console.error("Failed to fetch products:", e))
       .finally(() => setLoading(false));
