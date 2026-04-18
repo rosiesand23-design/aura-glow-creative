@@ -22,7 +22,7 @@ const HeroSection = () => {
             Botanical Luxury
           </p>
           <h1
-            className="heading-display mb-40 opacity-0 animate-fade-up text-foreground"
+            className="heading-display mb-64 opacity-0 animate-fade-up text-foreground"
             style={{ animationDelay: "0.4s" }}
           >
             Where Nature Meets
