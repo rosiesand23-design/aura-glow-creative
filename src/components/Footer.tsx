@@ -111,7 +111,8 @@ const Footer = () => {
           src={footerBanner}
           alt=""
           aria-hidden="true"
-          className="w-full h-auto block select-none mix-blend-multiply"
+          className="w-full h-auto block select-none"
+          style={{ filter: "brightness(1.08) contrast(1.05)" }}
         />
       </div>
     </footer>
