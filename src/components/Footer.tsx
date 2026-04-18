@@ -19,12 +19,6 @@ const footerLinks: Record<string, string> = {
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-white" role="contentinfo">
-      <img
-        src={footerBanner}
-        alt=""
-        aria-hidden="true"
-        className="w-full h-auto block select-none"
-      />
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div className="md:col-span-1">
