@@ -12,11 +12,11 @@
     --card: 0 0% 100%;
     --card-foreground: 0 0% 0%;
 
-    --popover: 36 33% 97%;
+    --popover: 0 0% 100%;
     --popover-foreground: 30 10% 15%;
 
     --primary: 30 10% 15%;
-    --primary-foreground: 36 33% 97%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 32 25% 90%;
     --secondary-foreground: 30 10% 25%;
