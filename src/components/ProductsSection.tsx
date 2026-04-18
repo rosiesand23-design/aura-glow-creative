@@ -46,13 +46,13 @@ const ProductsSection = () => {
                   key={product.node.id}
                   className="group cursor-pointer block"
                 >
-                  <div className="aspect-[4/5] overflow-hidden mb-6 bg-card">
+                  <div className="aspect-[4/5] overflow-hidden mb-6 bg-white">
                     {img ? (
                       <img
                         src={img.url}
                         alt={img.altText || product.node.title}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-multiply"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-muted-foreground">
