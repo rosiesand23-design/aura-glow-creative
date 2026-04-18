@@ -35,7 +35,7 @@ const PixieDust = () => {
     window.addEventListener("resize", resize);
 
     const spawnParticles = (delta: number) => {
-      const count = Math.min(Math.abs(delta) * 0.15, 4);
+      const count = Math.min(Math.abs(delta) * 0.35, 10);
       const vw = window.innerWidth;
       const vh = window.innerHeight;
 
