@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchProducts, ShopifyProduct } from "@/lib/shopify";
+import { getProductImage } from "@/lib/productImageOverrides";
 import { Loader2, ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -114,10 +115,10 @@ const Category = () => {
                     key={product.node.id}
                     className="group cursor-pointer block"
                   >
-                    <div className="aspect-[4/5] overflow-hidden mb-6 bg-card">
+                    <div className="aspect-[4/5] overflow-hidden mb-6 bg-white">
                       {img ? (
                         <img
-                          src={img.url}
+                          src={getProductImage(product.node.handle, img.url)}
                           alt={img.altText || product.node.title}
                           loading="lazy"
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
