@@ -9,7 +9,7 @@ const HeroSection = () => {
           alt="Elegant floral line art illustration"
           width={1920}
           height={1080}
-          className="w-full h-full object-contain opacity-20 scale-150 mx-auto"
+          className="w-full h-full object-contain opacity-60 scale-150 mx-auto"
         />
       </div>
 
