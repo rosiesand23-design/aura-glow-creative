@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Instagram } from "lucide-react";
+import footerBanner from "@/assets/footer-banner.png";
 
 const footerLinks: Record<string, string> = {
   "All Products": "/shop/all",
@@ -17,6 +18,12 @@ const footerLinks: Record<string, string> = {
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-white">
+      <img
+        src={footerBanner}
+        alt="甜花 Dulce Hana"
+        className="w-full h-auto block"
+        loading="lazy"
+      />
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div className="md:col-span-1">
