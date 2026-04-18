@@ -17,11 +17,11 @@ const footerLinks: Record<string, string> = {
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer className="border-t border-border bg-white">
       <img
         src={footerBanner}
         alt="甜花 Dulce Hana"
-        className="w-full h-16 md:h-24 lg:h-32 object-cover block"
+        className="w-full h-16 md:h-24 lg:h-32 object-contain block py-4"
         loading="lazy"
       />
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
