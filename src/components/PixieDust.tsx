@@ -26,6 +26,9 @@ const PixieDust = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // Respect user's reduced-motion preference
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const resize = () => {
       canvas.width = window.innerWidth * window.devicePixelRatio;
       canvas.height = window.innerHeight * window.devicePixelRatio;
@@ -150,6 +153,8 @@ const PixieDust = () => {
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
+      role="presentation"
       className="fixed inset-0 pointer-events-none z-50"
       style={{ width: "100vw", height: "100vh" }}
     />

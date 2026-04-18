@@ -10,13 +10,16 @@ import PixieDust from "@/components/PixieDust";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <PixieDust />
       <Navbar />
-      <HeroSection />
-      <PhilosophySection />
-      <ProductsSection />
-      <TestimonialsSection />
-      <NewsletterSection />
+      <main id="main-content" tabIndex={-1}>
+        <HeroSection />
+        <PhilosophySection />
+        <ProductsSection />
+        <TestimonialsSection />
+        <NewsletterSection />
+      </main>
       <Footer />
     </div>
   );
