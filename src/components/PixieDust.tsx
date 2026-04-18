@@ -35,7 +35,7 @@ const PixieDust = () => {
     window.addEventListener("resize", resize);
 
     const spawnParticles = (delta: number) => {
-      const count = Math.min(Math.abs(delta) * 0.35, 10);
+      const count = Math.min(Math.abs(delta) * 0.22, 6);
       const vw = window.innerWidth;
       const vh = window.innerHeight;
 
@@ -66,8 +66,8 @@ const PixieDust = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     const ambientInterval = setInterval(() => {
-      if (particlesRef.current.length < 25) {
-        for (let i = 0; i < 3; i++) {
+      if (particlesRef.current.length < 16) {
+        for (let i = 0; i < 2; i++) {
           particlesRef.current.push({
             x: Math.random() * window.innerWidth,
             y: Math.random() * window.innerHeight,
@@ -83,7 +83,7 @@ const PixieDust = () => {
           });
         }
       }
-    }, 250);
+    }, 350);
 
     const animate = () => {
       const w = window.innerWidth;
