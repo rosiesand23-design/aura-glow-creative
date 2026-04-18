@@ -66,22 +66,24 @@ const PixieDust = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     const ambientInterval = setInterval(() => {
-      if (particlesRef.current.length < 8) {
-        particlesRef.current.push({
-          x: Math.random() * window.innerWidth,
-          y: Math.random() * window.innerHeight,
-          size: Math.random() * 1.6 + 0.5,
-          opacity: Math.random() * 0.18 + 0.06,
-          vx: (Math.random() - 0.5) * 0.3,
-          vy: -Math.random() * 0.18,
-          life: 0,
-          maxLife: Math.random() * 75 + 32,
-          hue: 38 + Math.random() * 10,
-          shimmerPhase: Math.random() * Math.PI * 2,
-          shimmerSpeed: Math.random() * 0.07 + 0.025,
-        });
+      if (particlesRef.current.length < 25) {
+        for (let i = 0; i < 3; i++) {
+          particlesRef.current.push({
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            size: Math.random() * 1.6 + 0.5,
+            opacity: Math.random() * 0.18 + 0.06,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: -Math.random() * 0.18,
+            life: 0,
+            maxLife: Math.random() * 75 + 32,
+            hue: 38 + Math.random() * 10,
+            shimmerPhase: Math.random() * Math.PI * 2,
+            shimmerSpeed: Math.random() * 0.07 + 0.025,
+          });
+        }
       }
-    }, 450);
+    }, 250);
 
     const animate = () => {
       const w = window.innerWidth;
