@@ -18,30 +18,30 @@
     --primary: 30 10% 15%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 32 25% 90%;
-    --secondary-foreground: 30 10% 25%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 33 20% 92%;
-    --muted-foreground: 0 0% 20%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 30%;
 
-    --accent: 30 40% 70%;
-    --accent-foreground: 30 10% 15%;
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 32 20% 88%;
-    --input: 32 20% 88%;
-    --ring: 30 40% 70%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 80%;
 
     --radius: 0.25rem;
 
     --gold: 38 60% 55%;
     --gold-light: 38 50% 80%;
-    --cream: 36 33% 97%;
-    --cream-dark: 33 25% 92%;
-    --espresso: 30 10% 15%;
-    --warm-gray: 30 8% 50%;
+    --cream: 0 0% 100%;
+    --cream-dark: 0 0% 96%;
+    --espresso: 0 0% 10%;
+    --warm-gray: 0 0% 45%;
 
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
