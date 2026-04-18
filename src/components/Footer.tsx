@@ -106,6 +106,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <img
+        src={footerBanner}
+        alt=""
+        aria-hidden="true"
+        className="w-full h-auto block select-none"
+      />
     </footer>
   );
 };
