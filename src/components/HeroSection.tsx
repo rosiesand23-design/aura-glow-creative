@@ -29,7 +29,7 @@ const HeroSection = () => {
             <span className="block italic text-foreground">BELLEZA PURA</span>
           </h1>
           <p
-            className="text-elegant max-w-md mb-10 opacity-0 animate-fade-up text-muted-foreground"
+            className="text-elegant max-w-md mb-10 opacity-0 animate-fade-up !text-foreground"
             style={{ animationDelay: "0.6s" }}
           >
             Crafted from the rarest botanicals, each formulation is a testament
