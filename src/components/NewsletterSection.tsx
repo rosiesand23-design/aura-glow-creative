@@ -28,17 +28,20 @@ const NewsletterSection = () => {
         </p>
 
         {submitted ? (
-          <p className="text-sm tracking-wider text-accent font-medium animate-fade-in">
+          <p role="status" aria-live="polite" className="text-sm tracking-wider text-accent font-medium animate-fade-in">
             Thank you. Welcome to the circle.
           </p>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" aria-label="Newsletter signup">
+            <label htmlFor="newsletter-email" className="sr-only">Email address</label>
             <input
+              id="newsletter-email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               required
+              autoComplete="email"
               className="flex-1 px-5 py-3 bg-white border border-foreground text-foreground text-sm tracking-wider placeholder:text-foreground/40 focus:outline-none focus:border-foreground transition-colors font-body"
             />
             <button type="submit" className="btn-elegant text-xs whitespace-nowrap bg-white text-foreground border border-foreground">
