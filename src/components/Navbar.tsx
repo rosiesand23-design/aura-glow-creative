@@ -14,7 +14,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Dulce Hana"
-            className="h-10 md:h-12 w-auto invert"
+            className="h-10 md:h-12 w-auto"
           />
         </Link>
 
