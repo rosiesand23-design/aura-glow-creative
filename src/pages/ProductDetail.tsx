@@ -15,6 +15,8 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [selectedVariantIdx, setSelectedVariantIdx] = useState(0);
   const [selectedImage, setSelectedImage] = useState(0);
+  const addItem = useCartStore((s) => s.addItem);
+  const cartLoading = useCartStore((s) => s.isLoading);
 
   useEffect(() => {
     if (!handle) return;
@@ -134,9 +136,9 @@ const ProductDetail = () => {
 
             <Button
               onClick={async () => {
-                if (!selectedVariant) return;
-                await useCartStore.getState().addItem({
-                  product: product!,
+                if (!selectedVariant || !product) return;
+                await addItem({
+                  product,
                   variantId: selectedVariant.id,
                   variantTitle: selectedVariant.title,
                   price: selectedVariant.price,
@@ -144,14 +146,14 @@ const ProductDetail = () => {
                   selectedOptions: selectedVariant.selectedOptions || [],
                 });
                 toast.success("Added to bag", {
-                  description: product!.node.title,
+                  description: product.node.title,
                   position: "top-center",
                 });
               }}
-              disabled={!selectedVariant?.availableForSale || useCartStore((s) => s.isLoading)}
+              disabled={!selectedVariant?.availableForSale || cartLoading}
               className="w-full h-12 mt-4 text-xs tracking-[0.2em] uppercase"
             >
-              {useCartStore((s) => s.isLoading) ? (
+              {cartLoading ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
               ) : selectedVariant?.availableForSale === false ? (
                 "Sold Out"
