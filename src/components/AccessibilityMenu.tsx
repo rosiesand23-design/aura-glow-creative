@@ -60,9 +60,15 @@ const AccessibilityMenu = () => {
         aria-label={open ? "Close accessibility menu" : "Open accessibility menu"}
         aria-expanded={open}
         aria-controls="a11y-panel"
-        className="fixed bottom-6 right-6 z-[90] h-12 w-12 rounded-full bg-foreground text-background shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-2"
+        className="fixed bottom-6 right-6 z-[90] h-12 w-12 rounded-full overflow-hidden shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-2"
       >
-        {open ? <X className="h-5 w-5" aria-hidden="true" /> : <A11yIcon className="h-7 w-7" />}
+        {open ? (
+          <span className="h-12 w-12 rounded-full bg-foreground text-background flex items-center justify-center">
+            <X className="h-5 w-5" aria-hidden="true" />
+          </span>
+        ) : (
+          <img src={a11yIcon} alt="" width={48} height={48} loading="lazy" className="h-12 w-12" />
+        )}
       </button>
 
       {open && (
