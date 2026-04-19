@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/dulce-hana-wordmark-white.png";
+import logo from "@/assets/dulce-hana-logo.png";
 import CartDrawer from "@/components/CartDrawer";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Dulce Hana"
-            className="h-10 md:h-12 w-auto"
+            className="h-10 md:h-12 w-auto invert"
           />
         </Link>
 
