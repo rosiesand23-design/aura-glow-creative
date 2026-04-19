@@ -9,9 +9,12 @@ import ProductDetail from "./pages/ProductDetail.tsx";
 import Category from "./pages/Category.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
+import { useCartSync } from "@/hooks/useCartSync";
+
 const queryClient = new QueryClient();
 
 const AppContent = () => {
+  useCartSync();
   return (
     <Routes>
       <Route path="/" element={<Index />} />
