@@ -6,6 +6,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
 import PixieDust from "@/components/PixieDust";
+import AccessibilityMenu from "@/components/AccessibilityMenu";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
         <NewsletterSection />
       </main>
       <Footer />
+      <AccessibilityMenu />
     </div>
   );
 };
