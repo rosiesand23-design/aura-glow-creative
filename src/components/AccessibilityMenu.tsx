@@ -1,5 +1,17 @@
 import { useEffect, useState } from "react";
-import { Accessibility, X, Plus, Minus, Contrast, Pause, RotateCcw } from "lucide-react";
+import { X, Plus, Minus, Contrast, Pause, RotateCcw } from "lucide-react";
+
+const A11yIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 64 64" className={className} aria-hidden="true" focusable="false">
+    <circle cx="32" cy="32" r="30" fill="#5B2D90" />
+    <circle cx="32" cy="32" r="26" fill="none" stroke="#ffffff" strokeWidth="3" />
+    <circle cx="32" cy="14" r="4" fill="#ffffff" />
+    <path
+      d="M16 22 Q16 20 18 19.5 L28 18 L28 30 L30 46 L26 56 Q25.5 58 27.5 58.5 Q29.5 59 30 57 L33 46 L36 57 Q36.5 59 38.5 58.5 Q40.5 58 40 56 L36 46 L36 30 L46 18 L48 19.5 Q48 20 48 22 L40 27 L36 30 L28 30 L24 27 Z"
+      fill="#ffffff"
+    />
+  </svg>
+);
 
 type Settings = {
   fontScale: number; // 1 = 100%
@@ -61,7 +73,7 @@ const AccessibilityMenu = () => {
         aria-controls="a11y-panel"
         className="fixed bottom-6 right-6 z-[90] h-12 w-12 rounded-full bg-foreground text-background shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-2"
       >
-        {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Accessibility className="h-5 w-5" aria-hidden="true" />}
+        {open ? <X className="h-5 w-5" aria-hidden="true" /> : <A11yIcon className="h-7 w-7" />}
       </button>
 
       {open && (
