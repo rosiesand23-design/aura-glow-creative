@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/dulce-hana-logo.png";
+import logo from "@/assets/dulce-hana-wordmark.png";
 import CartDrawer from "@/components/CartDrawer";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-foreground backdrop-blur-md border-b border-border/50" role="banner">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md border-b border-border/50" role="banner">
       <nav className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 h-20 flex items-center justify-between" aria-label="Primary">
         <Link to="/" className="flex items-center">
           <img
             src={logo}
             alt="Dulce Hana"
-            className="h-10 md:h-12 w-auto invert"
+            className="h-6 md:h-8 w-auto"
           />
         </Link>
 
