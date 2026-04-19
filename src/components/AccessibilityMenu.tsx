@@ -73,7 +73,7 @@ const AccessibilityMenu = () => {
         aria-controls="a11y-panel"
         className="fixed bottom-6 right-6 z-[90] h-12 w-12 rounded-full bg-foreground text-background shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-2"
       >
-        {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Accessibility className="h-5 w-5" aria-hidden="true" />}
+        {open ? <X className="h-5 w-5" aria-hidden="true" /> : <A11yIcon className="h-7 w-7" />}
       </button>
 
       {open && (
