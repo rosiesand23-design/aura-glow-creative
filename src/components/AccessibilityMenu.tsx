@@ -1,17 +1,6 @@
 import { useEffect, useState } from "react";
 import { X, Plus, Minus, Contrast, Pause, RotateCcw } from "lucide-react";
-
-const A11yIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 64 64" className={className} aria-hidden="true" focusable="false">
-    <circle cx="32" cy="32" r="30" fill="#5B2D90" />
-    <circle cx="32" cy="32" r="26" fill="none" stroke="#ffffff" strokeWidth="3" />
-    <circle cx="32" cy="14" r="4" fill="#ffffff" />
-    <path
-      d="M16 22 Q16 20 18 19.5 L28 18 L28 30 L30 46 L26 56 Q25.5 58 27.5 58.5 Q29.5 59 30 57 L33 46 L36 57 Q36.5 59 38.5 58.5 Q40.5 58 40 56 L36 46 L36 30 L46 18 L48 19.5 Q48 20 48 22 L40 27 L36 30 L28 30 L24 27 Z"
-      fill="#ffffff"
-    />
-  </svg>
-);
+import a11yIcon from "@/assets/accessibility-icon.png";
 
 type Settings = {
   fontScale: number; // 1 = 100%
