@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchProductByHandle, ShopifyProduct } from "@/lib/shopify";
-import { Loader2, ArrowLeft } from "lucide-react";
+import { Loader2, ArrowLeft, ShoppingBag } from "lucide-react";
+import { toast } from "sonner";
+import { useCartStore } from "@/stores/cartStore";
+import { Button } from "@/components/ui/button";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -128,6 +131,36 @@ const ProductDetail = () => {
                 </div>
               );
             })}
+
+            <Button
+              onClick={async () => {
+                if (!selectedVariant) return;
+                await useCartStore.getState().addItem({
+                  product: product!,
+                  variantId: selectedVariant.id,
+                  variantTitle: selectedVariant.title,
+                  price: selectedVariant.price,
+                  quantity: 1,
+                  selectedOptions: selectedVariant.selectedOptions || [],
+                });
+                toast.success("Added to bag", {
+                  description: product!.node.title,
+                  position: "top-center",
+                });
+              }}
+              disabled={!selectedVariant?.availableForSale || useCartStore((s) => s.isLoading)}
+              className="w-full h-12 mt-4 text-xs tracking-[0.2em] uppercase"
+            >
+              {useCartStore((s) => s.isLoading) ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : selectedVariant?.availableForSale === false ? (
+                "Sold Out"
+              ) : (
+                <>
+                  <ShoppingBag className="w-4 h-4 mr-2" /> Add to Bag
+                </>
+              )}
+            </Button>
           </div>
         </div>
       </main>
