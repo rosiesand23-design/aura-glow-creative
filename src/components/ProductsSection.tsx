@@ -15,18 +15,8 @@ const ProductsSection = () => {
   }, []);
 
   return (
-    <section className="section-padding bg-white" id="collections">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
-            The Collection
-          </p>
-          <h2 className="heading-section text-foreground mb-4">
-            Curated for Your Ritual
-          </h2>
-          <div className="divider-gold mt-6" />
-        </div>
-
+    <section className="py-16 md:py-24 bg-secondary/30" id="collections">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         {loading ? (
           <div className="flex justify-center py-20">
             <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
@@ -36,39 +26,38 @@ const ProductsSection = () => {
             <p className="text-muted-foreground">No products found</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-            {products.map((product) => {
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {products.map((product, i) => {
               const img = product.node.images.edges[0]?.node;
-              const price = product.node.priceRange.minVariantPrice;
+              const rotation = ["-1.5deg", "1deg", "-0.5deg", "1.5deg", "0.5deg", "-1deg", "1.2deg", "-0.8deg"][i % 8];
               return (
                 <Link
                   to={`/product/${product.node.handle}`}
                   key={product.node.id}
-                  className="group cursor-pointer block"
+                  className="group block"
+                  style={{ transform: `rotate(${rotation})` }}
                 >
-                  <div className="aspect-[4/5] overflow-hidden mb-6 bg-white">
-                    {img ? (
-                      <img
-                        src={img.url}
-                        alt={img.altText || product.node.title}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-multiply"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                        No image
-                      </div>
-                    )}
+                  <div className="bg-white p-2 md:p-3 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div className="aspect-square overflow-hidden bg-white mb-2">
+                      {img ? (
+                        <img
+                          src={img.url}
+                          alt={img.altText || product.node.title}
+                          loading="lazy"
+                          className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs">
+                          No image
+                        </div>
+                      )}
+                    </div>
+                    <div className="bg-foreground py-1.5 px-2 text-center">
+                      <p className="text-[10px] md:text-xs tracking-[0.15em] uppercase text-white font-body truncate">
+                        {product.node.title}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-display text-xl text-foreground mb-1">
-                    {product.node.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-3 font-light line-clamp-2">
-                    {product.node.description}
-                  </p>
-                  <p className="text-sm tracking-wider text-foreground font-medium">
-                    {price.currencyCode} {parseFloat(price.amount).toFixed(2)}
-                  </p>
                 </Link>
               );
             })}
