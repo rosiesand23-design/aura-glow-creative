@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-skincare.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-white" aria-labelledby="hero-heading">
-      <div className="absolute inset-0" aria-hidden="true">
+      <div className="absolute inset-0 mt-8" aria-hidden="true">
         <img
           src={heroImage}
           alt=""
