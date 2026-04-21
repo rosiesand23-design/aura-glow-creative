@@ -45,11 +45,11 @@ const ProductsSection = () => {
                 <Link
                   to={`/product/${product.node.handle}`}
                   key={product.node.id}
-                  className="group cursor-pointer block"
+                  className="group block"
                   style={{ transform: `rotate(${rotation}deg)` }}
                 >
-                  <div className="transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative">
-                    <div className="aspect-square overflow-hidden bg-white">
+                  <div className="mx-auto max-w-[240px] bg-white p-3 pb-5 shadow-lg transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105">
+                    <div className="aspect-square overflow-hidden border border-border bg-white p-4">
                       {img ? (
                         <img
                           src={img.url}
@@ -58,10 +58,15 @@ const ProductsSection = () => {
                           className="w-full h-full object-contain bg-white mix-blend-multiply"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                        <div className="flex h-full w-full items-center justify-center text-muted-foreground">
                           No image
                         </div>
                       )}
+                    </div>
+                    <div className="mt-4 flex justify-center">
+                      <span className="inline-flex min-h-8 items-center justify-center bg-foreground px-4 py-1 text-center text-[10px] uppercase tracking-[0.16em] text-background">
+                        {product.node.title}
+                      </span>
                     </div>
                   </div>
                 </Link>
