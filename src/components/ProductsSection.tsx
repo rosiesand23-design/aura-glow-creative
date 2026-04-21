@@ -39,7 +39,7 @@ const ProductsSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
             {products.map((product, index) => {
               const img = product.node.images.edges[0]?.node;
-              const rotations = [-1.5, 1, -0.8, 1.5, -1, 0.8, -1.2, 0.5];
+              const rotations = [-5, 4, -6, 5, -4, 6, -5.5, 3.5];
               const rotation = rotations[index % rotations.length];
               return (
                 <Link
