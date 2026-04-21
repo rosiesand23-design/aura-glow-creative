@@ -84,7 +84,7 @@ export async function storefrontApiRequest(query: string, variables: Record<stri
       },
       {
         target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9240\.png(\?v=\d+)?/g,
-        replacement: "/12e1ee27-e766-4feb-8dbb-a9a1e3db77e5.png"
+        replacement: "/09419d70-fcb3-457c-abb0-42cb53bed55f.png"
       }
     ];
  
