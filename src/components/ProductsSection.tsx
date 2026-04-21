@@ -16,7 +16,7 @@ const ProductsSection = () => {
 
   return (
     <section className="section-padding bg-white" id="collections">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto bg-white">
         <div className="text-center mb-16">
           <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
             The Collection
