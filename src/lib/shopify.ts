@@ -72,21 +72,34 @@ export async function storefrontApiRequest(query: string, variables: Record<stri
 
    let data = await response.json();
  
-   // Handle visual image edits: Swap specific Shopify images with local uploads
-   const imageSwaps = [
-     {
-       target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9238\.png(\?v=\d+)?/g,
-       replacement: "/e3178861-81c9-4929-9df7-0644fde82a22-nobg.png"
-      },
-      {
-        target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9239\.png(\?v=\d+)?/g,
-        replacement: "/939b55e3-3cf0-4f26-985c-f0c1b9f25939-nobg.png"
-      },
-      {
-        target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9240\.png(\?v=\d+)?/g,
-        replacement: "/09419d70-fcb3-457c-abb0-42cb53bed55f-nobg.png"
-      }
-    ];
+  // Handle visual image edits: Swap specific Shopify product images with
+  // local transparent-background versions so Polaroid cards blend cleanly.
+  const imageSwaps: Array<{ target: RegExp; replacement: string }> = [
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9238\.png(\?v=\d+)?/g, replacement: "/e3178861-81c9-4929-9df7-0644fde82a22-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9239\.png(\?v=\d+)?/g, replacement: "/939b55e3-3cf0-4f26-985c-f0c1b9f25939-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9240\.png(\?v=\d+)?/g, replacement: "/09419d70-fcb3-457c-abb0-42cb53bed55f-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/Collagen_Moisturizer_2\.png(\?v=\d+)?/g, replacement: "/embrace-collagen-moisturizer-1-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9241\.png(\?v=\d+)?/g, replacement: "/glow-mask-1-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9252_be098561-1a02-4a4b-84d9-cc553c2f60de\.png(\?v=\d+)?/g, replacement: "/kale-face-cleanser-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9253\.png(\?v=\d+)?/g, replacement: "/age-defying-serum-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9254\.png(\?v=\d+)?/g, replacement: "/mint-exfoliating-facial-polish-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9255\.png(\?v=\d+)?/g, replacement: "/hydrating-facial-cleanser-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9256\.png(\?v=\d+)?/g, replacement: "/hyaluronic-acid-serum-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9279\.png(\?v=\d+)?/g, replacement: "/soothing-emulsion-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9291\.png(\?v=\d+)?/g, replacement: "/shea-body-butter-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9290\.png(\?v=\d+)?/g, replacement: "/oil-control-hydrator-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9289\.png(\?v=\d+)?/g, replacement: "/niacinamide-vitamin-boost-serum-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9285\.png(\?v=\d+)?/g, replacement: "/anti-aging-rose-gold-oil-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9284\.png(\?v=\d+)?/g, replacement: "/active-eye-cream-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9274_c77928e6-15df-47f6-9be9-b75630722e07\.png(\?v=\d+)?/g, replacement: "/hydration-serum-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9282\.png(\?v=\d+)?/g, replacement: "/glycolic-acid-serum-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9281\.png(\?v=\d+)?/g, replacement: "/nourish-hand-cream-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9280\.png(\?v=\d+)?/g, replacement: "/night-renewal-creme-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9277\.png(\?v=\d+)?/g, replacement: "/oil-free-daily-moisturizer-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9272\.png(\?v=\d+)?/g, replacement: "/firm-serum-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9275\.png(\?v=\d+)?/g, replacement: "/extreme-moisture-blend-nobg.png" },
+    { target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9274_0e5d56da-f05c-4443-8581-b604ed7208de\.png(\?v=\d+)?/g, replacement: "/soothing-moisturizer-nobg.png" },
+  ];
  
    if (data && typeof data === 'object') {
      let dataString = JSON.stringify(data);
