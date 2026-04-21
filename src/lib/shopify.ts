@@ -174,30 +174,7 @@ const PRODUCT_BY_HANDLE_QUERY = `
 `;
 
 const IMAGE_OVERRIDES: Record<string, string> = {
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9238.png?v=1776322793": "/products/collagen-retinol-serum.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9239.png?v=1776322873": "/products/mild-toning-elixir.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9240.png?v=1776322967": "/products/hyaluronic-moisturizer.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/Collagen_Moisturizer_2.png?v=1776303656": "/products/collagen-moisturizer.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9241.png?v=1776323113": "/55343a6a-68e3-4253-be63-ac5211680bf1.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9252_be098561-1a02-4a4b-84d9-cc553c2f60de.png?v=1776372002": "/products/kale-face-cleanser.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9253.png?v=1776372697": "/products/age-defying-serum.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9254.png?v=1776372914": "/products/mint-exfoliating.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9255.png?v=1776373126": "/products/hydrating-facial-cleanser.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9256.png?v=1776373352": "/products/hyaluronic-acid-serum.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9279.png?v=1776448542": "/products/soothing-emulsion.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9291.png?v=1776455927": "/products/shea-body-butter.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9290.png?v=1776455730": "/products/oil-control-hydrator.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9289.png?v=1776455663": "/products/niacinamide-serum.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9285.png?v=1776454635": "/products/rose-gold-oil.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9284.png?v=1776454269": "/products/active-eye-cream.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9274_c77928e6-15df-47f6-9be9-b75630722e07.png?v=1776454098": "/products/hydration-serum.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9282.png?v=1776450493": "/products/glycolic-acid-serum.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9281.png?v=1776450331": "/products/nourish-hand-cream.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9280.png?v=1776450245": "/products/night-renewal-creme.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9277.png?v=1776448205": "/products/oil-free-moisturizer.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9272.png?v=1776447613": "/products/firm-serum.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9275.png?v=1776446820": "/products/extreme-moisture-blend.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9274_0e5d56da-f05c-4443-8581-b604ed7208de.png?v=1776446134": "/products/soothing-moisturizer.png"
+  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9241.png?v=1776323113": "/55343a6a-68e3-4253-be63-ac5211680bf1.png"
 };
 
 function applyImageOverrides(product: ShopifyProduct): ShopifyProduct {
