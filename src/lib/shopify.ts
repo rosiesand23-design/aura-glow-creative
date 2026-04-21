@@ -72,14 +72,31 @@ export async function storefrontApiRequest(query: string, variables: Record<stri
 
    let data = await response.json();
  
-   // Handle visual image edits: Swap specific Shopify image with local upload
-   const newImage = "/e3178861-81c9-4929-9df7-0644fde82a22.png";
-   const targetImageRegex = /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9238\.png(\?v=\d+)?/g;
+   // Handle visual image edits: Swap specific Shopify images with local uploads
+   const imageSwaps = [
+     {
+       target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9238\.png(\?v=\d+)?/g,
+       replacement: "/e3178861-81c9-4929-9df7-0644fde82a22.png"
+     },
+     {
+       target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9239\.png(\?v=\d+)?/g,
+       replacement: "/20ea4d1b-2535-41c0-b806-467b2dd621c0.png"
+     }
+   ];
  
    if (data && typeof data === 'object') {
-     const dataString = JSON.stringify(data);
-     if (targetImageRegex.test(dataString)) {
-       data = JSON.parse(dataString.replace(targetImageRegex, newImage));
+     let dataString = JSON.stringify(data);
+     let modified = false;
+     
+     for (const swap of imageSwaps) {
+       if (swap.target.test(dataString)) {
+         dataString = dataString.replace(swap.target, swap.replacement);
+         modified = true;
+       }
+     }
+     
+     if (modified) {
+       data = JSON.parse(dataString);
      }
    }
  
