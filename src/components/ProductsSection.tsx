@@ -52,7 +52,7 @@ const ProductsSection = () => {
                     <div className="aspect-square overflow-hidden bg-white">
                       {img ? (
                         <img
-                          src={img.url}
+                           src={img.url.includes("IMG_9238.png") ? "/e3178861-81c9-4929-9df7-0644fde82a22.png" : img.url}
                           alt={img.altText || product.node.title}
                           loading="lazy"
                           className="w-full h-full object-contain"
