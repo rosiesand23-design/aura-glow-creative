@@ -34,28 +34,36 @@ const TestimonialsSection = () => {
         <div className="divider-gold mt-6 mb-16" />
 
         <div className="grid md:grid-cols-3 gap-10 md:gap-12">
-          {testimonials.map((t) => (
-            <div key={t.author} className="flex flex-col items-center">
-              <div className="flex gap-1 mb-6">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    size={14}
-                    className="text-yellow-500 fill-yellow-500"
-                  />
-                ))}
+          {testimonials.map((t, index) => {
+            const rotations = [-4, 3, -2];
+            const rotation = rotations[index % rotations.length];
+            return (
+              <div
+                key={t.author}
+                className="flex flex-col items-center bg-white p-6 shadow-sm transition-transform duration-500 hover:rotate-0 hover:scale-105"
+                style={{ transform: `rotate(${rotation}deg)` }}
+              >
+                <div className="flex gap-1 mb-6">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      size={14}
+                      className="text-yellow-500 fill-yellow-500"
+                    />
+                  ))}
+                </div>
+                <blockquote className="text-elegant text-sm italic leading-relaxed mb-6 max-w-sm">
+                  "{t.quote}"
+                </blockquote>
+                <p className="text-sm font-medium text-foreground tracking-wide">
+                  {t.author}
+                </p>
+                <p className="text-xs text-muted-foreground tracking-wider uppercase mt-1">
+                  {t.location}
+                </p>
               </div>
-              <blockquote className="text-elegant text-sm italic leading-relaxed mb-6 max-w-sm">
-                "{t.quote}"
-              </blockquote>
-              <p className="text-sm font-medium text-foreground tracking-wide">
-                {t.author}
-              </p>
-              <p className="text-xs text-muted-foreground tracking-wider uppercase mt-1">
-                {t.location}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
