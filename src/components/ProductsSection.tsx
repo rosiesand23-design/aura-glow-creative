@@ -55,7 +55,7 @@ const ProductsSection = () => {
                            src={img.url}
                           alt={img.altText || product.node.title}
                           loading="lazy"
-                          className="w-full h-full object-contain mix-blend-multiply"
+                          className="w-full h-full object-contain mix-blend-multiply contrast-[1.05] brightness-[1.08]"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-muted-foreground">
