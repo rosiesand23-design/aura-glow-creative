@@ -76,15 +76,15 @@ export async function storefrontApiRequest(query: string, variables: Record<stri
    const imageSwaps = [
      {
        target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9238\.png(\?v=\d+)?/g,
-       replacement: "/e3178861-81c9-4929-9df7-0644fde82a22.png"
+       replacement: "/e3178861-81c9-4929-9df7-0644fde82a22-nobg.png"
       },
       {
         target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9239\.png(\?v=\d+)?/g,
-        replacement: "/939b55e3-3cf0-4f26-985c-f0c1b9f25939.png"
+        replacement: "/939b55e3-3cf0-4f26-985c-f0c1b9f25939-nobg.png"
       },
       {
         target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9240\.png(\?v=\d+)?/g,
-        replacement: "/09419d70-fcb3-457c-abb0-42cb53bed55f.png"
+        replacement: "/09419d70-fcb3-457c-abb0-42cb53bed55f-nobg.png"
       }
     ];
  
