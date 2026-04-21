@@ -63,9 +63,6 @@ const ProductsSection = () => {
                         </div>
                       )}
                     </div>
-                    <h3 className="font-display text-sm text-foreground mt-2 truncate">
-                      {product.node.title}
-                    </h3>
                   </div>
                 </Link>
               );
