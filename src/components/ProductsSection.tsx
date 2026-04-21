@@ -39,6 +39,9 @@ const ProductsSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
             {products.map((product, index) => {
               const img = product.node.images.edges[0]?.node;
+              const imageUrl = img?.url === "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9241.png?v=1776323113"
+                ? "/55343a6a-68e3-4253-be63-ac5211680bf1.png"
+                : img?.url;
               const rotations = [-3, 2, -1.5, 3, -2, 1.5, -2.5, 1];
               const rotation = rotations[index % rotations.length];
               return (
