@@ -52,10 +52,10 @@ const ProductsSection = () => {
                     <div className="aspect-square overflow-hidden bg-white">
                       {img ? (
                         <img
-                          src={img.url}
+                           src={img.url}
                           alt={img.altText || product.node.title}
                           loading="lazy"
-                          className="w-full h-full object-contain mix-blend-multiply"
+                          className="w-full h-full object-contain mix-blend-multiply contrast-[1.05] brightness-[1.08]"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-muted-foreground">
