@@ -49,13 +49,13 @@ const ProductsSection = () => {
                   style={{ transform: `rotate(${rotation}deg)` }}
                 >
                   <div className="transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative">
-                  <div className="aspect-square overflow-hidden">
+                    <div className="aspect-square overflow-hidden bg-white">
                       {img ? (
                         <img
-                           src={img.url}
+                          src={img.url}
                           alt={img.altText || product.node.title}
                           loading="lazy"
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-contain mix-blend-multiply"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-muted-foreground">
