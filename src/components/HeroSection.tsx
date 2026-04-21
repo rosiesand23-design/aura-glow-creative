@@ -9,7 +9,7 @@ const HeroSection = () => {
           alt=""
           width={1920}
           height={1080}
-          className="w-full h-full object-contain opacity-60 scale-125 mx-auto"
+          className="w-full h-full object-cover opacity-60 scale-110 mx-auto"
         />
       </div>
 
