@@ -38,7 +38,10 @@ const ProductsSection = () => {
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
             {products.map((product, index) => {
-              const img = product.node.images.edges[0]?.node;
+              let img = product.node.images.edges[0]?.node;
+              if (img?.url === "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9238.png?v=1776322793") {
+                img = { ...img, url: "/0d692f33-a5f7-4479-9e7c-0019788ee378.png" };
+              }
               const rotations = [-3, 2, -1.5, 3, -2, 1.5, -2.5, 1];
               const rotation = rotations[index % rotations.length];
               return (
