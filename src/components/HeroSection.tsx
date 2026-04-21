@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-8">
         <div className="max-w-xl text-foreground">
           <p
-            className="text-sm tracking-[0.3em] uppercase mb-6 mt-12 opacity-0 animate-fade-up text-muted-foreground"
+            className="text-sm tracking-[0.3em] uppercase mb-6 mt-6 opacity-0 animate-fade-up text-muted-foreground"
             style={{ animationDelay: "0.2s" }}
           >
             Botanical Luxury
