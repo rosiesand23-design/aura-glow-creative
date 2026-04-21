@@ -21,10 +21,10 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           <a
-            href="/#products"
+            href="/#collections"
             className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Products
+            Collections
           </a>
           <a
             href="/#philosophy"
@@ -59,11 +59,11 @@ const Navbar = () => {
       {isOpen && (
         <div id="mobile-menu" className="md:hidden bg-white border-b border-border px-6 py-6 flex flex-col gap-4">
           <a
-            href="/#products"
+            href="/#collections"
             onClick={() => setIsOpen(false)}
             className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Products
+            Collections
           </a>
           <a
             href="/#philosophy"
