@@ -49,19 +49,28 @@ const ProductsSection = () => {
                   style={{ transform: `rotate(${rotation}deg)` }}
                 >
                   <div className="transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative">
-                    <div className="aspect-square overflow-hidden bg-white">
-                      {img ? (
-                        <img
-                          src={img.url}
-                          alt={img.altText || product.node.title}
-                          loading="lazy"
-                          className="w-full h-full object-contain"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                          No image
-                        </div>
-                      )}
+                    {/* Polaroid card */}
+                    <div className="bg-white border border-border/60 p-3 pb-0 shadow-sm">
+                      <div className="aspect-square overflow-hidden bg-white flex items-center justify-center">
+                        {img ? (
+                          <img
+                            src={img.url}
+                            alt={img.altText || product.node.title}
+                            loading="lazy"
+                            className="w-4/5 h-4/5 object-contain"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                            No image
+                          </div>
+                        )}
+                      </div>
+                      {/* Black label strip */}
+                      <div className="bg-foreground py-2 px-3 mt-3">
+                        <p className="text-background text-[10px] md:text-xs tracking-[0.15em] uppercase font-medium text-center truncate">
+                          {product.node.title}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </Link>
