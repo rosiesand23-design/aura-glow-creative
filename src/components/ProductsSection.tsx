@@ -36,38 +36,39 @@ const ProductsSection = () => {
             <p className="text-muted-foreground">No products found</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             {products.map((product) => {
               const img = product.node.images.edges[0]?.node;
+              const price = product.node.priceRange.minVariantPrice;
               return (
                 <Link
                   to={`/product/${product.node.handle}`}
                   key={product.node.id}
                   className="group cursor-pointer block"
                 >
-                  <div className="bg-white border border-border shadow-md p-3 pb-0 transition-transform duration-500 group-hover:-translate-y-1 group-hover:shadow-lg"
-                    style={{ transform: `rotate(${Math.random() * 4 - 2}deg)` }}
-                  >
-                    <div className="aspect-square overflow-hidden bg-white mb-3">
-                      {img ? (
-                        <img
-                          src={img.url}
-                          alt={img.altText || product.node.title}
-                          loading="lazy"
-                          className="w-full h-full object-contain mix-blend-multiply"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs">
-                          No image
-                        </div>
-                      )}
-                    </div>
-                    <div className="bg-foreground py-2 px-3 -mx-3">
-                      <h3 className="font-display text-xs md:text-sm text-white text-center tracking-wider uppercase truncate">
-                        {product.node.title}
-                      </h3>
-                    </div>
+                  <div className="aspect-[4/5] overflow-hidden mb-6 bg-white">
+                    {img ? (
+                      <img
+                        src={img.url}
+                        alt={img.altText || product.node.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-multiply"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                        No image
+                      </div>
+                    )}
                   </div>
+                  <h3 className="font-display text-xl text-foreground mb-1">
+                    {product.node.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3 font-light line-clamp-2">
+                    {product.node.description}
+                  </p>
+                  <p className="text-sm tracking-wider text-foreground font-medium">
+                    {price.currencyCode} {parseFloat(price.amount).toFixed(2)}
+                  </p>
                 </Link>
               );
             })}
