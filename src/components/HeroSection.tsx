@@ -3,13 +3,13 @@ import heroImage from "@/assets/hero-skincare.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-white" aria-labelledby="hero-heading">
-      <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+      <div className="absolute inset-0" aria-hidden="true">
         <img
           src={heroImage}
           alt=""
           width={1920}
           height={1080}
-          className="w-full h-full object-contain opacity-60 scale-150 -rotate-3"
+          className="w-full h-full object-contain opacity-60 scale-150 mx-auto"
         />
       </div>
 
