@@ -23,7 +23,7 @@ const HeroSection = () => {
           </p>
           <h1
             id="hero-heading"
-            className="heading-display mb-80 opacity-0 animate-fade-up text-foreground"
+            className="heading-display mb-16 opacity-0 animate-fade-up text-foreground"
             style={{ animationDelay: "0.4s" }}
           >
             Where Nature Meets
