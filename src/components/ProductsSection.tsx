@@ -39,7 +39,7 @@ const ProductsSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
             {products.map((product, index) => {
               const img = product.node.images.edges[0]?.node;
-              const rotations = [-5, 4, -6, 5, -4, 6, -5.5, 3.5];
+              const rotations = [-3, 2, -1.5, 3, -2, 1.5, -2.5, 1];
               const rotation = rotations[index % rotations.length];
               return (
                 <Link
@@ -49,13 +49,13 @@ const ProductsSection = () => {
                   style={{ transform: `rotate(${rotation}deg)` }}
                 >
                   <div className="transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative">
-                    <div className="aspect-square overflow-hidden bg-white">
+                    <div className="aspect-square overflow-hidden">
                       {img ? (
                         <img
-                           src={img.url}
+                          src={img.url}
                           alt={img.altText || product.node.title}
                           loading="lazy"
-                          className="w-full h-full object-contain mix-blend-multiply contrast-[1.05] brightness-[1.08]"
+                          className="w-full h-full object-contain"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-muted-foreground">
