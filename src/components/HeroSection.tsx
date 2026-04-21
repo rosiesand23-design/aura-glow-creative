@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-skincare.png";
+import heroImage from "@/assets/hero-bg.webp";
 
 const HeroSection = () => {
   return (
