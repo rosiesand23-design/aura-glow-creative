@@ -73,13 +73,13 @@ export async function storefrontApiRequest(query: string, variables: Record<stri
    let data = await response.json();
  
    // Handle visual image edits: Swap specific Shopify image with local upload
-   const targetImage = "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9238.png";
    const newImage = "/e3178861-81c9-4929-9df7-0644fde82a22.png";
+   const targetImageRegex = /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9238\.png(\?v=\d+)?/g;
  
    if (data && typeof data === 'object') {
      const dataString = JSON.stringify(data);
-     if (dataString.includes(targetImage)) {
-       data = JSON.parse(dataString.split(targetImage).join(newImage));
+     if (targetImageRegex.test(dataString)) {
+       data = JSON.parse(dataString.replace(targetImageRegex, newImage));
      }
    }
  
