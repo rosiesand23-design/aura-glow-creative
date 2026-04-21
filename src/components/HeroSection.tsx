@@ -30,7 +30,7 @@ const HeroSection = () => {
             <span className="block italic text-foreground">BELLEZA PURA</span>
           </h1>
           <div
-            className="flex flex-col sm:flex-row gap-4 mb-10 mt-48 opacity-0 animate-fade-up"
+            className="flex flex-col sm:flex-row gap-4 mb-10 mt-64 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
             <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground">
