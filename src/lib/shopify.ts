@@ -173,16 +173,33 @@ const PRODUCT_BY_HANDLE_QUERY = `
   }
 `;
 
+const IMAGE_OVERRIDES: Record<string, string> = {
+  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9241.png?v=1776323113": "/55343a6a-68e3-4253-be63-ac5211680bf1.png"
+};
+
+function applyImageOverrides(product: ShopifyProduct) {
+  if (!product?.node?.images?.edges) return product;
+  
+  product.node.images.edges.forEach(edge => {
+    if (edge.node.url && IMAGE_OVERRIDES[edge.node.url]) {
+      edge.node.url = IMAGE_OVERRIDES[edge.node.url];
+    }
+  });
+  
+  return product;
+}
+
 export async function fetchProducts(first = 20, query?: string): Promise<ShopifyProduct[]> {
   const data = await storefrontApiRequest(STOREFRONT_QUERY, { first, query });
-  return data?.data?.products?.edges || [];
+  const products = data?.data?.products?.edges || [];
+  return products.map(applyImageOverrides);
 }
 
 export async function fetchProductByHandle(handle: string) {
   const data = await storefrontApiRequest(PRODUCT_BY_HANDLE_QUERY, { handle });
   const product = data?.data?.productByHandle;
   if (!product) return null;
-  return { node: product } as ShopifyProduct;
+  return applyImageOverrides({ node: product } as ShopifyProduct);
 }
 
 // Cart mutations
