@@ -70,7 +70,7 @@ const ProductDetail = () => {
                 <img
                   src={images[selectedImage].node.url}
                   alt={images[selectedImage].node.altText || product.node.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover mix-blend-multiply"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-muted-foreground">No image</div>
