@@ -10,7 +10,7 @@ import AccessibilityMenu from "@/components/AccessibilityMenu";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <PixieDust />
       <Navbar />
