@@ -77,12 +77,12 @@ export async function storefrontApiRequest(query: string, variables: Record<stri
      {
        target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9238\.png(\?v=\d+)?/g,
        replacement: "/e3178861-81c9-4929-9df7-0644fde82a22.png"
-     },
-     {
-       target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9239\.png(\?v=\d+)?/g,
-       replacement: "/20ea4d1b-2535-41c0-b806-467b2dd621c0.png"
-     }
-   ];
+      },
+      {
+        target: /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9240\.png(\?v=\d+)?/g,
+        replacement: "/c4bdb240-273f-4761-80a5-738c6b274d31.png"
+      }
+    ];
  
    if (data && typeof data === 'object') {
      let dataString = JSON.stringify(data);
