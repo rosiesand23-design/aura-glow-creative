@@ -23,14 +23,14 @@ const HeroSection = () => {
           </p>
           <h1
             id="hero-heading"
-            className="heading-display mb-56 opacity-0 animate-fade-up text-foreground"
+            className="heading-display mb-16 md:mb-32 lg:mb-56 opacity-0 animate-fade-up text-foreground"
             style={{ animationDelay: "0.4s" }}
           >
             Where Nature Meets
             <span className="block italic text-foreground">BELLEZA PURA</span>
           </h1>
           <div
-            className="flex flex-col sm:flex-row gap-4 mb-10 mt-48 opacity-0 animate-fade-up"
+            className="flex flex-col sm:flex-row gap-4 mb-10 mt-12 md:mt-24 lg:mt-48 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
             <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground">
