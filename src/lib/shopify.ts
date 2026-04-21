@@ -70,7 +70,19 @@ export async function storefrontApiRequest(query: string, variables: Record<stri
     throw new Error(`HTTP error! status: ${response.status}`);
   }
 
-  const data = await response.json();
+   let data = await response.json();
+ 
+   // Handle visual image edits: Swap specific Shopify image with local upload
+   const newImage = "/e3178861-81c9-4929-9df7-0644fde82a22.png";
+   const targetImageRegex = /https:\/\/cdn\.shopify\.com\/s\/files\/1\/0781\/8880\/6366\/files\/IMG_9238\.png(\?v=\d+)?/g;
+ 
+   if (data && typeof data === 'object') {
+     const dataString = JSON.stringify(data);
+     if (targetImageRegex.test(dataString)) {
+       data = JSON.parse(dataString.replace(targetImageRegex, newImage));
+     }
+   }
+ 
   if (data.errors) {
     throw new Error(`Error calling Shopify: ${data.errors.map((e: { message: string }) => e.message).join(', ')}`);
   }
