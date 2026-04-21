@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
             return (
               <div
                 key={t.author}
-                className="flex flex-col items-center bg-white p-6 shadow-sm transition-transform duration-500 hover:rotate-0 hover:scale-105"
+                className="flex flex-col items-center bg-background p-6 shadow-sm transition-transform duration-500 hover:rotate-0 hover:scale-105"
                 style={{ transform: `rotate(${rotation}deg)` }}
               >
                 <div className="flex gap-1 mb-6">
