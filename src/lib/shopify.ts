@@ -174,8 +174,7 @@ const PRODUCT_BY_HANDLE_QUERY = `
 `;
 
 const IMAGE_OVERRIDES: Record<string, string> = {
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9241.png?v=1776323113": "/55343a6a-68e3-4253-be63-ac5211680bf1.png",
-  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9238.png?v=1776322793": "/a79ac9ab-d400-4f0c-a62e-582f0c907b05.png"
+  "https://cdn.shopify.com/s/files/1/0781/8880/6366/files/IMG_9241.png?v=1776323113": "/55343a6a-68e3-4253-be63-ac5211680bf1.png"
 };
 
 function applyImageOverrides(product: ShopifyProduct): ShopifyProduct {
