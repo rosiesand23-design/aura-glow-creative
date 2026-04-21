@@ -105,12 +105,14 @@ export async function storefrontApiRequest(query: string, variables: Record<stri
      let dataString = JSON.stringify(data);
      let modified = false;
      
-     for (const swap of imageSwaps) {
-       if (swap.target.test(dataString)) {
-         dataString = dataString.replace(swap.target, swap.replacement);
-         modified = true;
-       }
-     }
+      for (const swap of imageSwaps) {
+        swap.target.lastIndex = 0;
+        if (swap.target.test(dataString)) {
+          swap.target.lastIndex = 0;
+          dataString = dataString.replace(swap.target, swap.replacement);
+          modified = true;
+        }
+      }
      
      if (modified) {
        data = JSON.parse(dataString);
