@@ -32,7 +32,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <AppContent />
+        <div className="min-h-screen bg-white">
+          <AppContent />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
