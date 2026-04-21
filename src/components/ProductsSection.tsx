@@ -48,26 +48,24 @@ const ProductsSection = () => {
                   className="group cursor-pointer block"
                   style={{ transform: `rotate(${rotation}deg)` }}
                 >
-                  <div className="bg-white border border-neutral-300 p-2.5 pb-0 transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative shadow-sm">
-                    <div className="aspect-square overflow-hidden bg-white">
+                  <div className="transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative">
+                    <div className="aspect-square overflow-hidden">
                       {img ? (
                         <img
                           src={img.url}
                           alt={img.altText || product.node.title}
                           loading="lazy"
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-cover"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-neutral-400">
+                        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
                           No image
                         </div>
                       )}
                     </div>
-                    <div className="bg-black py-2 px-2 mt-2.5">
-                      <p className="text-white text-[10px] md:text-xs tracking-[0.15em] uppercase text-center font-medium truncate">
-                        {product.node.title}
-                      </p>
-                    </div>
+                    <h3 className="font-display text-sm text-foreground mt-2 truncate">
+                      {product.node.title}
+                    </h3>
                   </div>
                 </Link>
               );
