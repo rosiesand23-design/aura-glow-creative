@@ -28,8 +28,8 @@ const ProductsSection = () => {
         </div>
 
         <div className="bg-black w-full mb-12">
-          <div className="px-6 py-2 md:py-3">
-            <h2 className="text-white tracking-[0.3em] uppercase font-semibold text-xs md:text-sm">
+          <div className="px-6 py-1 md:py-1.5">
+            <h2 className="text-white tracking-[0.3em] uppercase font-semibold text-[10px] md:text-xs">
               Dulce Hana
             </h2>
           </div>
