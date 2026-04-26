@@ -15,14 +15,6 @@ const ProductsSection = () => {
   }, []);
 
   return (
-    <>
-      <div className="bg-black w-full">
-        <div className="max-w-7xl mx-auto px-6 py-5 md:py-6">
-          <h2 className="text-white tracking-[0.3em] uppercase font-semibold text-sm md:text-base">
-            Dulce Hana
-          </h2>
-        </div>
-      </div>
     <section className="section-padding bg-white" id="collections">
       <div className="max-w-7xl mx-auto bg-white">
         <div className="text-center mb-16">
@@ -33,6 +25,14 @@ const ProductsSection = () => {
             Curated for Your Ritual
           </h2>
           <div className="divider-gold mt-6" />
+        </div>
+
+        <div className="bg-black w-full -mx-[calc((100vw-100%)/2)] mb-12">
+          <div className="max-w-7xl mx-auto px-6 py-5 md:py-6">
+            <h2 className="text-white tracking-[0.3em] uppercase font-semibold text-sm md:text-base">
+              Dulce Hana
+            </h2>
+          </div>
         </div>
 
         {loading ? (
@@ -79,7 +79,6 @@ const ProductsSection = () => {
         )}
       </div>
     </section>
-    </>
   );
 };
 
