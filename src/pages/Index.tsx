@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import ProductsSection from "@/components/ProductsSection";
+import BellezaPuraSection from "@/components/BellezaPuraSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
@@ -16,8 +17,9 @@ const Index = () => {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
-        <PhilosophySection />
         <ProductsSection />
+        <BellezaPuraSection />
+        <PhilosophySection />
         <TestimonialsSection />
         <NewsletterSection />
       </main>
