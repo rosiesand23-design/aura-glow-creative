@@ -27,9 +27,9 @@ const ProductsSection = () => {
           <div className="divider-gold mt-6" />
         </div>
 
-        <div className="bg-black w-full -mx-[calc((100vw-100%)/2)] mb-12">
-          <div className="max-w-7xl mx-auto px-6 py-5 md:py-6">
-            <h2 className="text-white tracking-[0.3em] uppercase font-semibold text-sm md:text-base">
+        <div className="bg-black w-full mb-12">
+          <div className="px-6 py-2 md:py-3">
+            <h2 className="text-white tracking-[0.3em] uppercase font-semibold text-xs md:text-sm">
               Dulce Hana
             </h2>
           </div>
