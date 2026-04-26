@@ -26,26 +26,23 @@ const ProductsSection = () => {
             <p className="text-muted-foreground">No products found</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 md:gap-x-14 md:gap-y-20">
-            {products.map((product, index) => {
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+            {products.map((product) => {
               const img = product.node.images.edges[0]?.node;
-              const rotations = [-2.5, 1.8, -1.2, 2.2, 1.5, -2, 2.5, -1.5];
-              const rotation = rotations[index % rotations.length];
               return (
                 <Link
                   to={`/product/${product.node.handle}`}
                   key={product.node.id}
-                  style={{ transform: `rotate(${rotation}deg)` }}
-                  className="group block bg-white p-3 pb-0 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.18),0_2px_4px_rgba(0,0,0,0.08)] hover:shadow-[0_18px_36px_-10px_rgba(0,0,0,0.28),0_4px_8px_rgba(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-1 hover:rotate-0"
+                  className="group block bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)] transition-shadow duration-500"
                 >
-                  <div className="border border-black/15">
+                  <div className="p-3 pb-0">
                     <div className="aspect-square overflow-hidden bg-white">
                       {img ? (
                         <img
                           src={img.url}
                           alt={img.altText || product.node.title}
                           loading="lazy"
-                          className="w-full h-full object-contain p-4"
+                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs">
@@ -54,8 +51,8 @@ const ProductsSection = () => {
                       )}
                     </div>
                   </div>
-                  <div className="bg-black text-white text-center py-2.5 px-2 my-3 mx-1">
-                    <p className="text-[9px] md:text-[10px] tracking-[0.18em] uppercase font-light truncate">
+                  <div className="bg-black text-white text-center py-3 px-2 mt-3">
+                    <p className="text-[10px] md:text-xs tracking-[0.18em] uppercase font-light truncate">
                       {product.node.title}
                     </p>
                   </div>
