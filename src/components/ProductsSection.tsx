@@ -41,23 +41,23 @@ const ProductsSection = () => {
               const handle = product?.node.handle;
 
               const Card = (
-                <div className="bg-white shadow-[0_4px_18px_rgba(0,0,0,0.08)] flex flex-col">
-                  {/* Photo area */}
-                  <div className="aspect-square bg-white p-3 md:p-4 flex items-center justify-center overflow-hidden">
+                <div className="bg-white shadow-[0_6px_20px_rgba(0,0,0,0.12)] flex flex-col p-2 md:p-3">
+                  {/* Photo area with thin inner border */}
+                  <div className="aspect-square bg-white border border-black/80 flex items-center justify-center overflow-hidden">
                     {img ? (
                       <img
                         src={img.url}
                         alt={img.altText || name}
                         loading="lazy"
-                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="w-[80%] h-[80%] object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                       />
                     ) : (
                       <div className="w-full h-full bg-neutral-100" />
                     )}
                   </div>
                   {/* Black label bar */}
-                  <div className="bg-black text-white text-center py-3 md:py-4 px-2">
-                    <span className="font-display italic text-sm md:text-base tracking-wide">
+                  <div className="bg-black text-white text-center py-2.5 md:py-3 px-2 mt-2 md:mt-3">
+                    <span className="font-body text-[10px] md:text-xs tracking-[0.2em] uppercase">
                       {name}
                     </span>
                   </div>
