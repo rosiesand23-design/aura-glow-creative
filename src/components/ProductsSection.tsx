@@ -27,14 +27,6 @@ const ProductsSection = () => {
           <div className="divider-gold mt-6" />
         </div>
 
-        <div className="bg-black w-full mb-12">
-          <div className="px-6 py-0.5 md:py-1">
-            <h2 className="text-white tracking-[0.3em] uppercase font-semibold text-[8px] md:text-[10px]">
-              Dulce Hana
-            </h2>
-          </div>
-        </div>
-
         {loading ? (
           <div className="flex justify-center py-20">
             <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
@@ -77,6 +69,14 @@ const ProductsSection = () => {
             })}
           </div>
         )}
+
+        <div className="bg-black w-full mt-12">
+          <div className="px-6 py-0.5 md:py-1">
+            <h2 className="text-white tracking-[0.3em] uppercase font-semibold text-[8px] md:text-[10px]">
+              Dulce Hana
+            </h2>
+          </div>
+        </div>
       </div>
     </section>
   );
