@@ -79,9 +79,9 @@ const ProductsSection = () => {
         )}
 
         <div className="bg-black w-full mt-12">
-          <div className="px-6 py-0.5 md:py-1 flex justify-end">
+          <div className="px-6 py-px flex justify-end">
             <h2
-              className="text-white text-[10px] md:text-xs leading-none"
+              className="text-white text-[8px] md:text-[10px] leading-none"
               style={{ fontFamily: '"Ma Shan Zheng", "Noto Serif SC", cursive' }}
             >
               甜花
