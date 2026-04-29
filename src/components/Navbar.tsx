@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/dulce-hana-logo.png";
-import CartDrawer from "@/components/CartDrawer";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,6 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <CartDrawer />
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
