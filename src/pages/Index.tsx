@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import TopActionsBar from "@/components/TopActionsBar";
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import ProductsSection from "@/components/ProductsSection";
@@ -15,6 +16,7 @@ const Index = () => {
       <PixieDust />
       <Navbar />
       <main id="main-content" tabIndex={-1}>
+        <TopActionsBar />
         <HeroSection />
         <PhilosophySection />
         <ProductsSection />
