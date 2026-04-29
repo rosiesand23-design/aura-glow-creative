@@ -24,19 +24,19 @@ const Navbar = () => {
             href="/#collections"
             className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Collections
+            ​
           </a>
           <a
             href="/#philosophy"
             className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Philosophy
+            ​
           </a>
           <a
             href="/#rituals"
             className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Rituals
+            ​
           </a>
         </div>
 
@@ -63,21 +63,21 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
             className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Collections
+            ​
           </a>
           <a
             href="/#philosophy"
             onClick={() => setIsOpen(false)}
             className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Philosophy
+            ​
           </a>
           <a
             href="/#rituals"
             onClick={() => setIsOpen(false)}
             className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            Rituals
+            ​
           </a>
         </div>
       )}
