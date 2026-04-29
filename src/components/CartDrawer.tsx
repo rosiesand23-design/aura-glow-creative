@@ -48,9 +48,9 @@ export const CartDrawer = () => {
           className="relative text-foreground hover:text-accent transition-colors"
           aria-label={`Open cart, ${totalItems} items`}
         >
-          <ShoppingBag className="h-5 w-5" aria-hidden="true" />
+          <ShoppingBag className="h-9 w-9" aria-hidden="true" />
           {totalItems > 0 && (
-            <Badge className="absolute -top-2 -right-2 h-4 w-4 min-w-4 rounded-full p-0 flex items-center justify-center text-[10px] bg-foreground text-background border-0">
+            <Badge className="absolute -top-2 -right-2 h-5 w-5 min-w-5 rounded-full p-0 flex items-center justify-center text-[11px] bg-foreground text-background border-0">
               {totalItems}
             </Badge>
           )}
