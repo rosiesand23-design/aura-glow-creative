@@ -37,6 +37,9 @@ const HeroSection = () => {
             <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground">
               Explore Collection
             </a>
+            <a href="#ingredients" className="btn-elegant-outline text-foreground border-foreground">
+              Philosophy
+            </a>
             <a href="#rituals" className="btn-elegant-outline text-foreground border-foreground">
               Our Rituals
             </a>
