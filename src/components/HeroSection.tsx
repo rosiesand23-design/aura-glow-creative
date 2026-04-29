@@ -34,13 +34,13 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10 mt-[28rem] opacity-0 animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
-            <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground">
+            <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground min-w-[14rem]">
               Explore Collection
             </a>
-            <a href="#ingredients" className="btn-elegant-outline text-foreground border-foreground">
+            <a href="#ingredients" className="btn-elegant-outline text-foreground border-foreground min-w-[14rem]">
               Philosophy
             </a>
-            <a href="#rituals" className="btn-elegant-outline text-foreground border-foreground">
+            <a href="#rituals" className="btn-elegant-outline text-foreground border-foreground min-w-[14rem]">
               Our Rituals
             </a>
             <CartDrawer />
