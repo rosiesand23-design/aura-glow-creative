@@ -24,19 +24,14 @@ const HeroSection = () => {
           </p>
           <h1
             id="hero-heading"
-            className="heading-display mb-16 opacity-0 animate-fade-up text-foreground leading-[1.05] md:leading-[1.1] flex items-start gap-4"
+            className="heading-display mb-16 opacity-0 animate-fade-up text-foreground leading-[1.05] md:leading-[1.1]"
             style={{ animationDelay: "0.4s" }}
           >
-            <span>
-              Where Nature Meets
-              <span className="block italic text-foreground mt-0 md:mt-1">BELLEZA PURA</span>
-            </span>
-            <span className="mt-2 shrink-0">
-              <CartDrawer />
-            </span>
+            Where Nature Meets
+            <span className="block italic text-foreground mt-0 md:mt-1">BELLEZA PURA</span>
           </h1>
           <div
-            className="flex flex-col sm:flex-row gap-4 mb-10 mt-[28rem] opacity-0 animate-fade-up"
+            className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10 mt-[28rem] opacity-0 animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
             <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground">
@@ -45,6 +40,7 @@ const HeroSection = () => {
             <a href="#rituals" className="btn-elegant-outline text-foreground border-foreground">
               Our Rituals
             </a>
+            <CartDrawer />
           </div>
           <p
             className="text-elegant max-w-md opacity-0 animate-fade-up !text-foreground"
