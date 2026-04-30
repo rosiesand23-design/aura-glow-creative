@@ -1,4 +1,4 @@
-import footerBanner from "@/assets/footer-banner-tianhua.webp";
+import footerBanner from "@/assets/footer-banner-dulcehana.webp";
 
 const SimpleFooter = () => {
   return (
