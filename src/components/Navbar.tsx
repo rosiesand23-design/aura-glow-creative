@@ -14,27 +14,27 @@ const Navbar = () => {
       </Link>
       <nav
         aria-label="Primary"
-        className="flex items-center justify-center gap-5 md:gap-8 px-6 py-2 bg-black text-background"
+        className="flex items-center justify-center gap-4 md:gap-6 px-6 py-1.5 bg-black text-background"
       >
         <a
           href="/#collections"
-          className="text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
+          className="text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
         >
           Explore Collection
         </a>
         <a
           href="/#ingredients"
-          className="text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
+          className="text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
         >
           Philosophy
         </a>
         <a
           href="/#rituals"
-          className="text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
+          className="text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
         >
           Our Rituals
         </a>
-        <div className="text-background [&_button]:text-background [&_button:hover]:text-accent [&_svg]:!h-7 [&_svg]:!w-7">
+        <div className="text-background [&_button]:text-background [&_button:hover]:text-accent [&_svg]:!h-5 [&_svg]:!w-5">
           <CartDrawer />
         </div>
       </nav>
