@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Instagram } from "lucide-react";
-import footerBanner from "@/assets/footer-banner.webp";
+import footerBanner from "@/assets/footer-banner.png";
 
 
 const footerLinks: Record<string, string> = {
@@ -112,6 +112,7 @@ const Footer = () => {
           alt=""
           aria-hidden="true"
           className="w-full h-auto block select-none"
+          style={{ filter: "brightness(1.08) contrast(1.05)" }}
         />
       </div>
     </footer>
