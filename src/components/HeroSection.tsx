@@ -1,5 +1,5 @@
 import heroImage from "@/assets/hero-skincare.png";
-import CartDrawer from "@/components/CartDrawer";
+
 
 const HeroSection = () => {
   return (
@@ -34,16 +34,6 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 mb-10 mt-[28rem] opacity-0 animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
-            <a href="#collections" className="btn-elegant text-foreground bg-white border border-foreground w-64 shrink-0 whitespace-nowrap">
-              Explore Collection
-            </a>
-            <a href="#ingredients" className="btn-elegant-outline text-foreground border-foreground w-64 shrink-0 whitespace-nowrap">
-              Philosophy
-            </a>
-            <a href="#rituals" className="btn-elegant-outline text-foreground border-foreground w-64 shrink-0 whitespace-nowrap">
-              Our Rituals
-            </a>
-            <CartDrawer />
           </div>
           <p
             className="text-elegant max-w-md opacity-0 animate-fade-up !text-foreground"
