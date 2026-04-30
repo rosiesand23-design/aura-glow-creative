@@ -3,7 +3,7 @@ import CartDrawer from "@/components/CartDrawer";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-white" aria-labelledby="hero-heading">
+    <section className="relative min-h-screen flex items-center bg-background" aria-labelledby="hero-heading">
       <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
         <img
           src={heroImage}

@@ -2,7 +2,7 @@ import footerBanner from "@/assets/footer-banner-dulcehana.webp";
 
 const SimpleFooter = () => {
   return (
-    <footer className="bg-white" role="contentinfo">
+    <footer className="bg-background" role="contentinfo">
       <img
         src={footerBanner}
         alt=""
