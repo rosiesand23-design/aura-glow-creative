@@ -74,7 +74,7 @@ const Category = () => {
       <PixieDust />
       <Navbar />
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="max-w-7xl mx-auto">
           <Link
             to="/"
