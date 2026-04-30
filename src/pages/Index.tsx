@@ -18,11 +18,11 @@ const Index = () => {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
+        <ProductsSection />
         <div className="grid lg:grid-cols-2">
           <PhilosophySection />
           <RitualsSection />
         </div>
-        <ProductsSection />
         <TestimonialsSection />
         <NewsletterSection />
       </main>
