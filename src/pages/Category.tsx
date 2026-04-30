@@ -114,7 +114,7 @@ const Category = () => {
                     key={product.node.id}
                     className="group cursor-pointer block"
                   >
-                    <div className="aspect-[4/5] overflow-hidden mb-6 bg-[#F4F4F4]">
+                    <div className="aspect-[4/5] overflow-hidden mb-6 bg-background">
                       {img ? (
                         <img
                           src={img.url}
