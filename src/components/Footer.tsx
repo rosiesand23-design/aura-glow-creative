@@ -18,7 +18,7 @@ const footerLinks: Record<string, string> = {
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-white" role="contentinfo">
+    <footer className="border-t border-border bg-background" role="contentinfo">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div className="md:col-span-1">
@@ -106,7 +106,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white">
+      <div className="bg-background">
         <img
           src={footerBanner}
           alt=""
