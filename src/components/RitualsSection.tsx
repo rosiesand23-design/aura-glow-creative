@@ -40,7 +40,7 @@ const RitualsSection = () => {
           {rituals.map((ritual) => (
             <article
               key={ritual.title}
-              className="group bg-white border border-border p-10 transition-all duration-500 hover:border-accent hover:shadow-lg"
+              className="group bg-[#F4F4F4] border border-border p-10 transition-all duration-500 hover:border-accent hover:shadow-lg"
             >
               <div className="w-14 h-14 mx-auto mb-6 flex items-center justify-center border border-border rounded-full group-hover:border-accent transition-colors duration-500">
                 <ritual.icon
