@@ -65,7 +65,7 @@ const ProductDetail = () => {
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <div className="aspect-[4/5] bg-card overflow-hidden mb-4">
+            <div className="aspect-[4/5] bg-[#F4F4F4] overflow-hidden mb-4">
               {images[selectedImage] ? (
                 <img
                   src={images[selectedImage].node.url}
@@ -82,7 +82,7 @@ const ProductDetail = () => {
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    className={`w-16 h-16 flex-shrink-0 bg-card overflow-hidden border-2 transition-colors ${
+                    className={`w-16 h-16 flex-shrink-0 bg-[#F4F4F4] overflow-hidden border-2 transition-colors ${
                       i === selectedImage ? "border-accent" : "border-transparent"
                     }`}
                   >
