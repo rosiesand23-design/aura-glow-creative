@@ -5,6 +5,7 @@ import RitualsSection from "@/components/RitualsSection";
 import ProductsSection from "@/components/ProductsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
+import SimpleFooter from "@/components/SimpleFooter";
 
 import PixieDust from "@/components/PixieDust";
 import AccessibilityMenu from "@/components/AccessibilityMenu";
@@ -25,6 +26,7 @@ const Index = () => {
         <TestimonialsSection />
         <NewsletterSection />
       </main>
+      <SimpleFooter />
       <AccessibilityMenu />
     </div>
   );
