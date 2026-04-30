@@ -1,5 +1,5 @@
 import heroImage from "@/assets/hero-skincare.png";
-import CartDrawer from "@/components/CartDrawer";
+
 
 const HeroSection = () => {
   return (
