@@ -23,7 +23,7 @@ const pillars = [
 
 const PhilosophySection = () => {
   return (
-    <section className="section-padding bg-background" id="ingredients">
+    <section className="section-padding bg-[#F4F4F4]" id="ingredients">
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
           Our Philosophy
