@@ -26,7 +26,7 @@ const rituals = [
 
 const RitualsSection = () => {
   return (
-    <section className="section-padding bg-secondary/30" id="rituals">
+    <section className="section-padding bg-[#F4F4F4]" id="rituals">
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
           Daily Rituals
