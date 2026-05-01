@@ -29,13 +29,13 @@ const Navbar = () => {
           aria-label="Primary"
           className="hidden md:flex absolute inset-y-0 right-0 items-center gap-7 px-10 text-background"
         >
-          {navLinks.map((link) => (
+          {navLinks.map((l) => (
             <a
-              key={link.href}
-              href={link.href}
+              key={l.href}
+              href={l.href}
               className="text-[11px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
             >
-              {link.label}
+              {l.label}
             </a>
           ))}
           <div className="text-background [&_button]:text-background [&_button:hover]:text-accent [&_svg]:!h-6 [&_svg]:!w-6">
@@ -43,41 +43,46 @@ const Navbar = () => {
           </div>
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          type="button"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setIsOpen((v) => !v)}
-          className="md:hidden absolute inset-y-0 right-0 flex items-center px-5 text-background hover:text-accent transition-colors"
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* Mobile controls */}
+        <div className="md:hidden absolute inset-y-0 right-0 flex items-center gap-3 px-4 text-background">
+          <div className="text-background [&_button]:text-background [&_button:hover]:text-accent [&_svg]:!h-5 [&_svg]:!w-5">
+            <CartDrawer />
+          </div>
+          <button
+            type="button"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
+            onClick={() => setIsOpen((v) => !v)}
+            className="text-background hover:text-accent transition-colors"
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu panel */}
-      {isOpen && (
-        <nav
-          id="mobile-menu"
-          aria-label="Mobile primary"
-          className="md:hidden bg-black border-t border-background/10 px-6 py-5 flex flex-col items-end gap-4 text-background"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-[11px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
-            >
-              {link.label}
-            </a>
+      <nav
+        id="mobile-nav"
+        aria-label="Mobile primary"
+        className={`md:hidden overflow-hidden bg-black border-t border-background/10 transition-[max-height] duration-300 ease-in-out ${
+          isOpen ? "max-h-64" : "max-h-0"
+        }`}
+      >
+        <ul className="flex flex-col py-2">
+          {navLinks.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                onClick={() => setIsOpen(false)}
+                className="block px-6 py-3 text-[11px] tracking-[0.25em] uppercase text-background/90 hover:text-accent transition-colors"
+              >
+                {l.label}
+              </a>
+            </li>
           ))}
-          <div className="text-background [&_button]:text-background [&_button:hover]:text-accent [&_svg]:!h-6 [&_svg]:!w-6">
-            <CartDrawer />
-          </div>
-        </nav>
-      )}
+        </ul>
+      </nav>
     </header>
   );
 };
