@@ -15,12 +15,21 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black" role="banner">
-      <div className="relative">
-        <Link to="/" aria-label="Dulce Hana home" className="block">
+      {/*
+        Reserve the banner's 24:1 aspect ratio (1920x80) on the wrapper so the
+        absolute-positioned nav has a stable centerline even before the image
+        decodes. min-h guarantees a sensible fallback height if the image fails.
+      */}
+      <div className="relative w-full aspect-[24/1] min-h-[44px] sm:min-h-[56px] md:min-h-[64px] bg-black">
+        <Link to="/" aria-label="Dulce Hana home" className="block absolute inset-0">
           <img
             src={headerBanner}
             alt="Dulce Hana"
-            className="w-full h-auto block select-none"
+            width={1920}
+            height={80}
+            decoding="async"
+            fetchPriority="high"
+            className="w-full h-full object-cover object-center block select-none"
           />
         </Link>
 
