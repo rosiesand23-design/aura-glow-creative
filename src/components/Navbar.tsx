@@ -20,7 +20,7 @@ const Navbar = () => {
           <img
             src={headerBanner}
             alt="Dulce Hana"
-            className="w-full h-auto block select-none scale-110 origin-center py-2"
+            className="w-full h-auto block select-none"
           />
         </Link>
 
