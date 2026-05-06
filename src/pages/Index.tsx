@@ -18,7 +18,6 @@ const Index = () => {
       <PixieDust />
       <Navbar />
       <main id="main-content" tabIndex={-1}>
-        <HeroSection />
         <ProductsSection />
         <div className="px-6 md:px-12 lg:px-20 py-12 md:py-16 flex items-center justify-center">
           <div className="max-w-7xl mx-auto relative w-full bg-background overflow-hidden flex justify-center">
