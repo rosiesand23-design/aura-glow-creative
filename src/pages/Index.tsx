@@ -29,9 +29,7 @@ const Index = () => {
             />
           </div>
         </div>
-        <div className="-mt-64 md:-mt-72">
-          <HeroSection />
-        </div>
+        <HeroSection />
         <div className="grid lg:grid-cols-2">
           <PhilosophySection />
           <RitualsSection />
