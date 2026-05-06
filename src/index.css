@@ -125,6 +125,17 @@
     background-color: hsl(var(--background)) !important;
     color: hsl(var(--foreground)) !important;
     color-scheme: light !important;
+    -webkit-color-scheme: light !important;
+    -webkit-text-fill-color: hsl(var(--foreground));
+  }
+
+  /* Safari/iOS dark-mode override */
+  @supports (-webkit-touch-callout: none) {
+    html, body, #root {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      color-scheme: light !important;
+    }
   }
 
   body {
