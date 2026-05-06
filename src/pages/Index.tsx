@@ -6,6 +6,7 @@ import ProductsSection from "@/components/ProductsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import SimpleFooter from "@/components/SimpleFooter";
+import flowerImage from "@/assets/hero-skincare.png";
 
 import PixieDust from "@/components/PixieDust";
 import AccessibilityMenu from "@/components/AccessibilityMenu";
@@ -19,6 +20,14 @@ const Index = () => {
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
         <ProductsSection />
+        <div className="w-full bg-background">
+          <img
+            src={flowerImage}
+            alt="Botanical flower"
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </div>
         <div className="grid lg:grid-cols-2">
           <PhilosophySection />
           <RitualsSection />

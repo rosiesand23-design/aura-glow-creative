@@ -1,19 +1,6 @@
-import heroImage from "@/assets/hero-skincare.png";
-
-
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-background" aria-labelledby="hero-heading">
-      <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-        <img
-          src={heroImage}
-          alt=""
-          width={1920}
-          height={1080}
-          className="w-full h-full object-cover scale-[1.04] object-[center_40%]"
-        />
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-8">
         <div className="max-w-xl text-foreground">
           <p
