@@ -19,7 +19,7 @@ const Index = () => {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
-        <div className="-mt-48 sm:-mt-72 md:-mt-96">
+        <div className="-mt-40 sm:-mt-60 md:-mt-80">
           <ProductsSection />
         </div>
         <div className="relative w-full bg-background overflow-hidden -mt-24 sm:-mt-36 md:-mt-60">
