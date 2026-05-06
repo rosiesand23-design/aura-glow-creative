@@ -19,7 +19,9 @@ const Index = () => {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
-        <ProductsSection />
+        <div className="-mt-16 sm:-mt-24 md:-mt-32">
+          <ProductsSection />
+        </div>
         <div className="relative w-full bg-background overflow-hidden -mt-24 sm:-mt-36 md:-mt-60">
           <img
             src={flowerImage}
