@@ -11,20 +11,15 @@ const HeroSection = () => {
           </p>
           <h1
             id="hero-heading"
-            className="heading-display mb-16 opacity-0 animate-fade-up text-foreground leading-[1.05] md:leading-[1.1]"
+            className="heading-display mb-6 sm:mb-8 md:mb-10 opacity-0 animate-fade-up text-foreground leading-[1.05] md:leading-[1.1]"
             style={{ animationDelay: "0.4s" }}
           >
             Where Nature Meets
             <span className="block italic text-foreground mt-0 md:mt-1">BELLEZA PURA</span>
           </h1>
-          <div
-            className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 mt-8 sm:mt-12 md:mt-16 mb-6 sm:mb-8 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.6s" }}
-          >
-          </div>
           <p
             className="text-elegant max-w-md opacity-0 animate-fade-up !text-foreground"
-            style={{ animationDelay: "0.8s" }}
+            style={{ animationDelay: "0.6s" }}
           >
             Crafted from the rarest botanicals, each formulation is a testament
             to the art of skincare — pure, potent, and profoundly effective.
