@@ -18,7 +18,7 @@ const HeroSection = () => {
             <span className="block italic text-foreground mt-0 md:mt-1">BELLEZA PURA</span>
           </h1>
           <div
-            className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 mb-10 mt-[28rem] opacity-0 animate-fade-up"
+            className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 mb-10 mt-[18rem] opacity-0 animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
           </div>
