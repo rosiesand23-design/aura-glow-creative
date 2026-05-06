@@ -24,7 +24,7 @@ const Index = () => {
           <img
             src={flowerImage}
             alt="Botanical flower"
-            className="block w-[320%] max-w-none h-auto mx-auto -translate-x-[34%]"
+            className="block w-[280%] max-w-none h-auto mx-auto -translate-x-[32%]"
             loading="lazy"
           />
         </div>
