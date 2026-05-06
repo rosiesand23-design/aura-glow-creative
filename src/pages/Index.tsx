@@ -29,7 +29,7 @@ const Index = () => {
             />
           </div>
         </div>
-        <div className="-mt-72 md:-mt-80">
+        <div className="-mt-80 md:-mt-96">
           <HeroSection />
         </div>
         <div className="grid lg:grid-cols-2">
