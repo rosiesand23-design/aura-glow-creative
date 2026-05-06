@@ -31,6 +31,9 @@ const Index = () => {
           </div>
         </div>
         <div className="grid lg:grid-cols-2">
+          <PhilosophySection />
+          <RitualsSection />
+        </div>
         <TestimonialsSection />
         <NewsletterSection />
       </main>
