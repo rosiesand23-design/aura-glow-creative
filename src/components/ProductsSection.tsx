@@ -36,7 +36,7 @@ const ProductsSection = () => {
             <p className="text-muted-foreground">No products found</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-10 md:gap-y-12 px-2 md:px-0">
             {products.map((product, index) => {
               const img = product.node.images.edges[0]?.node;
               const rotations = [-3, 2, -2, 3, -2, 2, -3, 1];
