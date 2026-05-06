@@ -34,6 +34,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2">
           <PhilosophySection />
           <RitualsSection />
+          </div>
         </div>
         <TestimonialsSection />
         <NewsletterSection />
