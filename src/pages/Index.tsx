@@ -19,10 +19,8 @@ const Index = () => {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
-        <div className="-mt-32 sm:-mt-48 md:-mt-64">
-          <ProductsSection />
-        </div>
-        <div className="relative w-full bg-background overflow-hidden -mt-4 sm:-mt-12 md:-mt-32 flex justify-center">
+        <ProductsSection />
+        <div className="relative w-full bg-background overflow-hidden flex justify-center">
           <img
             src={flowerImage}
             alt="Botanical flower"
