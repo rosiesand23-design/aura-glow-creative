@@ -29,6 +29,7 @@ const Index = () => {
             />
           </div>
         </div>
+        <HeroSection />
         <div className="grid lg:grid-cols-2">
           <PhilosophySection />
           <RitualsSection />
