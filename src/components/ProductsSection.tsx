@@ -49,7 +49,7 @@ const ProductsSection = () => {
                   style={{ transform: `rotate(${rotation}deg)` }}
                 >
                   <div className="transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative">
-                    <div className="aspect-square overflow-hidden bg-background">
+                    <div className="aspect-square overflow-hidden bg-white">
                       {img ? (
                         <img
                           src={img.url}
