@@ -22,11 +22,11 @@ const Index = () => {
         <div className="-mt-32 sm:-mt-48 md:-mt-64">
           <ProductsSection />
         </div>
-        <div className="relative w-full bg-background overflow-hidden -mt-24 sm:-mt-36 md:-mt-60">
+        <div className="relative w-full bg-background overflow-hidden -mt-24 sm:-mt-36 md:-mt-60 flex justify-center">
           <img
             src={flowerImage}
             alt="Botanical flower"
-            className="block w-[200%] max-w-none h-auto relative left-1/2 -translate-x-1/2"
+            className="block w-[200%] max-w-none h-auto shrink-0"
             loading="lazy"
           />
         </div>
