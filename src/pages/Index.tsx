@@ -22,7 +22,7 @@ const Index = () => {
         <div className="-mt-32 sm:-mt-48 md:-mt-64">
           <ProductsSection />
         </div>
-        <div className="relative w-full bg-background overflow-hidden -mt-12 sm:-mt-20 md:-mt-40 flex justify-center">
+        <div className="relative w-full bg-background overflow-hidden -mt-8 sm:-mt-16 md:-mt-36 flex justify-center">
           <img
             src={flowerImage}
             alt="Botanical flower"
