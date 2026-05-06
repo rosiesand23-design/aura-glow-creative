@@ -19,7 +19,7 @@ const Index = () => {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <ProductsSection />
-        <div className="px-6 md:px-12 lg:px-20 -mt-20 md:-mt-28 pb-12 md:pb-16 flex items-center justify-center">
+        <div className="px-6 md:px-12 lg:px-20 -mt-16 md:-mt-24 flex items-center justify-center">
           <div className="max-w-7xl mx-auto relative w-full bg-background overflow-hidden flex justify-center">
             <img
               src={flowerImage}
@@ -29,7 +29,7 @@ const Index = () => {
             />
           </div>
         </div>
-        <div className="-mt-80 md:-mt-96">
+        <div className="-mt-24 md:-mt-40">
           <HeroSection />
         </div>
         <div className="grid lg:grid-cols-2">
