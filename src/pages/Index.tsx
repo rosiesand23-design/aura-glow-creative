@@ -20,7 +20,7 @@ const Index = () => {
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
         <ProductsSection />
-        <div className="px-6 md:px-12 lg:px-20 -mt-6">
+        <div className="px-6 md:px-12 lg:px-20">
           <div className="max-w-7xl mx-auto relative w-full bg-background overflow-hidden flex justify-center">
             <img
               src={flowerImage}
