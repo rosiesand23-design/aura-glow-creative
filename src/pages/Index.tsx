@@ -30,12 +30,7 @@ const Index = () => {
             />
           </div>
         </div>
-        <div className="px-6 md:px-12 lg:px-20">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2">
-          <PhilosophySection />
-          <RitualsSection />
-          </div>
-        </div>
+        <div className="grid lg:grid-cols-2">
         <TestimonialsSection />
         <NewsletterSection />
       </main>
