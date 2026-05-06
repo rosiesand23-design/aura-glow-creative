@@ -14,7 +14,8 @@ const NewsletterSection = () => {
 
   return (
     <section className="section-padding bg-background">
-      <div className="max-w-2xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto">
+        <div className="max-w-2xl mx-auto text-center">
         <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
           Stay Connected
         </p>
@@ -49,6 +50,7 @@ const NewsletterSection = () => {
             </button>
           </form>
         )}
+        </div>
       </div>
     </section>
   );

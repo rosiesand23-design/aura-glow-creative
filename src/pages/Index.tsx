@@ -20,18 +20,17 @@ const Index = () => {
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
         <ProductsSection />
-        <div className="relative w-full bg-background overflow-hidden flex justify-center">
-          <img
-            src={flowerImage}
-            alt="Botanical flower"
-            className="block w-[200%] max-w-none h-auto shrink-0"
-            loading="lazy"
-          />
+        <div className="px-6 md:px-12 lg:px-20">
+          <div className="max-w-7xl mx-auto relative w-full bg-background overflow-hidden flex justify-center">
+            <img
+              src={flowerImage}
+              alt="Botanical flower"
+              className="block w-[200%] max-w-none h-auto shrink-0"
+              loading="lazy"
+            />
+          </div>
         </div>
         <div className="grid lg:grid-cols-2">
-          <PhilosophySection />
-          <RitualsSection />
-        </div>
         <TestimonialsSection />
         <NewsletterSection />
       </main>
