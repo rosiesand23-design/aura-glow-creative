@@ -20,11 +20,11 @@ const Index = () => {
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
         <ProductsSection />
-        <div className="w-full bg-background overflow-hidden">
+        <div className="relative w-full bg-background overflow-hidden -mt-12 md:-mt-20">
           <img
             src={flowerImage}
             alt="Botanical flower"
-            className="block w-[280%] max-w-none h-auto mx-auto -translate-x-[32%]"
+            className="block w-[280%] max-w-none h-auto relative left-1/2 -translate-x-1/2"
             loading="lazy"
           />
         </div>
