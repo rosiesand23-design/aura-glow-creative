@@ -48,7 +48,7 @@ const ProductsSection = () => {
                   className="group cursor-pointer block"
                   style={{ transform: `rotate(${rotation}deg)` }}
                 >
-                  <div className="transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative bg-white p-3 pb-10 shadow-[0_4px_14px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
+                  <div className="transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105 relative">
                     <div className="aspect-square overflow-hidden bg-white">
                       {img ? (
                         <img
